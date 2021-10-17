@@ -36,20 +36,6 @@
 .type-tags {
   display: flex;
 }
-.tag1 {
-  margin: 0px 4px;
-  border-radius: 8px;
-  background-color: #7ed957;
-  padding: 0px 8px;
-  color: white;
-}
-.tag2 {
-  margin: 0px 4px;
-  border-radius: 8px;
-  background-color: #cb6ce6;
-  padding: 0px 8px;
-  color: white;
-}
 .abil-title {
   margin: 8px 8px;
 }

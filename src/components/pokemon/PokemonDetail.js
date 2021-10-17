@@ -9,26 +9,24 @@ function PokemonDetail(props) {
         <h1 className="detail-number"># {props.number}</h1>
       </div>
       <div className="detail-gen">
-        <h2 className="gen-title">Generación: </h2>
+        <h3 className="gen-title">Generación: </h3>
         <p className="gen-name">{props.gen}</p>
       </div>
       <div className="detail-clas">
-        <h2 className="clas-title">Classification: </h2>
+        <h3 className="clas-title">Classification: </h3>
         <p className="clas-name">{props.classification}</p>
       </div>
-      <h2 className="type-title">Type: </h2>
+      <h3 className="type-title">Type: </h3>
       <div className="type-tags">
-        {/*    {props.types.map((type, index) => (
+        {props.types.map((type, index) => (
           <PokemonType type={type} key={index} />
-        ))} */}
-        <p className="tag1">Type 1</p>
-        <p className="tag2">Type 2</p>
+        ))}
       </div>
-      <h2 className="abil-title">Abilities: </h2>
+      <h3 className="abil-title">Abilities: </h3>
       <div className="abilities">
         {/*    {props.abilities.map((ability, index) => (
-          <PokemonAbility ability={ability} key={index} /> Este componente todavia no existe
-        ))} */}
+          <PokemonAbility ability={ability} key={index} /> 
+        ))} Este componente todavia no existe pero no se si es necesario*/}
         <p className="ability">Ability 1</p>
         <p className="ability">Ability 2</p>
       </div>
