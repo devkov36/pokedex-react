@@ -10,8 +10,9 @@ function SinglePokemon(props) {
         name={props.name}
         number={props.number}
         gen={props.gen}
-        classification={props.gen}
+        classification={props.classification}
         types={props.types}
+        abilities={props.abilities}
       />
     </section>
   );
