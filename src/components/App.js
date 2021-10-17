@@ -9,7 +9,7 @@ const typesP = ["grass", "poison"];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header">s
         <Title
           title="Flying Pokémon"
           img="https://cdn2.bulbagarden.net/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png"
