@@ -1,0 +1,8 @@
+#blue {
+    background: rgb(17, 199, 255);
+    width: 5em;
+    height: 5em;
+    border-width: 1vh;
+    border-style: outset;
+    border-radius: 5em;
+}
