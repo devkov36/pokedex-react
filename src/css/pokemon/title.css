@@ -1,0 +1,16 @@
+.title-line:after {
+  content: "";
+  display: block;
+  background-color: #d9d9d9;
+  height: 5px;
+  flex-grow: 0.95;
+  margin-left: 16px;
+}
+.title-line {
+  display: flex;
+  align-items: center;
+}
+.title-img {
+  width: 40px;
+  margin-left: 8px;
+}
