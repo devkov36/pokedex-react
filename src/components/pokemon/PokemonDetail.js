@@ -1,5 +1,6 @@
 import "../../css/pokemon/pokemonDetail.css";
 import PokemonType from "./PokemonType";
+import PokemonAbility from "./PokemonAbility";
 
 function PokemonDetail(props) {
   return (
@@ -24,11 +25,9 @@ function PokemonDetail(props) {
       </div>
       <h3 className="abil-title">Abilities: </h3>
       <div className="abilities">
-        {/*    {props.abilities.map((ability, index) => (
-          <PokemonAbility ability={ability} key={index} /> 
-        ))} Este componente todavia no existe pero no se si es necesario*/}
-        <p className="ability">Ability 1</p>
-        <p className="ability">Ability 2</p>
+        {props.abilities.map((ability, index) => (
+          <PokemonAbility ability={ability} key={index} />
+        ))}
       </div>
     </div>
   );

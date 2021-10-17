@@ -1,15 +1,15 @@
-:root {
+/*:root {
     --color1: gray;
     --color2: black;
-}
+}*/
 .typeBackground {
     background: repeating-linear-gradient(
     45deg,
-    var(--color1),
-    var(--color1) 4px,
+    gray,
+    gray 4px,
     #00000000 4px,
     #00000000 8px
-    );
+    ); 
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -18,11 +18,11 @@
 .typeBackground2 {
     background: repeating-linear-gradient(
     -45deg,
-    var(--color2),
-    var(--color2) 4px,
+    gray,
+    gray 4px,
     #00000000 4px,
     #00000000 8px
-    );
+    ); 
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -32,4 +32,348 @@
 }
 .pokemonImg {
     width: 150px;
+}
+
+.flying-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #98bcec,
+    #98bcec 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.steel-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #5095a4,
+    #5095a4 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.rock-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #cdbb8b,
+    #cdbb8b 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.grass-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #6cbc5b,
+    #6cbc5b 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.dark-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #585661,
+    #585661 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.ghost-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #4f6fbc,
+    #4f6fbc 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.water-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #369edf,
+    #369edf 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.fairy-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #ec93e5,
+    #ec93e5 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.poison-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #af66cf,
+    #af66cf 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.normal-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #a0a29f,
+    #a0a29f 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.fighting-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #d6435d,
+    #d6435d 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.ground-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #de7c4d,
+    #de7c4d 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.fire-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #ffa44d,
+    #ffa44d 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.psychic-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #ff8582,
+    #ff8582 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.bug-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #9bbc31,
+    #9bbc31 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.bug-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #9bbc31,
+    #9bbc31 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.ice-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #74d0c3,
+    #74d0c3 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.electric-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #fcd850,
+    #fcd850 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.dragon-back {
+    background: repeating-linear-gradient(
+    45deg,
+    #016dc9,
+    #016dc9 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+
+.flying-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #98bcec,
+    #98bcec 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.steel-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #5095a4,
+    #5095a4 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.rock-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #cdbb8b,
+    #cdbb8b 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.grass-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #6cbc5b,
+    #6cbc5b 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.dark-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #585661,
+    #585661 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.ghost-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #4f6fbc,
+    #4f6fbc 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.water-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #369edf,
+    #369edf 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.fairy-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #ec93e5,
+    #ec93e5 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.poison-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #af66cf,
+    #af66cf 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.normal-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #a0a29f,
+    #a0a29f 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.fighting-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #d6435d,
+    #d6435d 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.ground-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #de7c4d,
+    #de7c4d 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.fire-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #ffa44d,
+    #ffa44d 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.psychic-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #ff8582,
+    #ff8582 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.bug-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #9bbc31,
+    #9bbc31 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.bug-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #9bbc31,
+    #9bbc31 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.ice-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #74d0c3,
+    #74d0c3 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.electric-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #fcd850,
+    #fcd850 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
+}
+.dragon-back2 {
+    background: repeating-linear-gradient(
+    -45deg,
+    #016dc9,
+    #016dc9 4px,
+    #00000000 4px,
+    #00000000 8px
+    );
 }
