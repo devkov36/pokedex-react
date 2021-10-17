@@ -5,9 +5,9 @@ import PokemonInfo from "./PokemonInfo";
 function PokemonCard(props) {
   return (
     <section className="pokemon-card">
-      <PokemonImage types={props.types} src={props.img} />
-      <PokemonInfo
-        number={props.number}
+      <PokemonImage types={props.types} src={props.imageUrl} />
+      <PokemonInfo 
+        pokedexNumber={props.pokedexNumber}
         name={props.name}
         types={props.types}
       />

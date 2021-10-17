@@ -23,8 +23,8 @@ const typeColors = {
 };
 class PokemonType extends React.Component {
   render() {
-    const r = document.querySelector(':root');
-    r.style.setProperty('--colorType',typeColors[this.props.type]);
+    //const r = document.querySelector(':root');
+    //r.style.setProperty('--colorType',typeColors[this.props.type]);
     return <p className={`type ${this.props.type}`}>{this.props.type}</p>;
   }
 }

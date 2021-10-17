@@ -1,5 +1,5 @@
 import "../../css/pokemon/pokemonList.css";
-import PokemonCard from "./PokemonCard2";
+import PokemonCard from "./PokemonCard";
 import Title from "./Title";
 
 function PokemonList(props) {
@@ -11,9 +11,9 @@ function PokemonList(props) {
       <section className="pokemon-list-grid">
         {props.pokemons.map((pokemon, index) => (
           <PokemonCard
-            img={pokemon.img}
+            imageUrl={pokemon.imageUrl}
+            pokedexNumber={pokemon.pokedexNumber}
             name={pokemon.name}
-            number={pokemon.number}
             types={pokemon.types}
             key={index}
           />

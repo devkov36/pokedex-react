@@ -6,81 +6,48 @@ import PokemonDetail from "./pokemon/PokemonDetail";
 import PokemonInfo from "./pokemon/PokemonInfo";
 import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
-const typesP = ["grass", "poison"];
-const abilP = ["Overgrow", "Chlorophyll"];
 const pokemon = [
   {
+    pokedexNumber: 1,
     name: "Bulbasaur",
-    number: "1",
-    types: typesP,
-    img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  },
-  {
+    classification: "Seed",
+    gen: 1,
+    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    types: ["grass"],
+    abilities: ["Overgrow", "Chlorophyll"]
+  },{
+    pokedexNumber: 2,
     name: "Bulbasaur2",
-    number: "2",
-    types: typesP,
-    img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  },
-  {
+    classification: "Seed",
+    gen: 1,
+    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    types: ["flying"],
+    abilities: ["Overgrow", "Chlorophyll"]
+  },{
+    pokedexNumber: 3,
     name: "Bulbasaur3",
-    number: "3",
-    types: typesP,
-    img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  },
-  {
+    classification: "Seed",
+    gen: 1,
+    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    types: ["grass", "poison"],
+    abilities: ["Overgrow", "Chlorophyll"]
+  },{
+    pokedexNumber: 4,
     name: "Bulbasaur4",
-    number: "4",
-    types: typesP,
-    img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  },
-  {
-    name: "Bulbasaur5",
-    number: "5",
-    types: typesP,
-    img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  },
-  {
-    name: "Bulbasaur6",
-    number: "6",
-    types: typesP,
-    img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  },
+    classification: "Seed",
+    gen: 1,
+    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    types: ["electric"],
+    abilities: ["Overgrow", "Chlorophyll"]
+  }
 ];
+const type = {type: "Flying", imageUrl:"https://cdn2.bulbagarden.net/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png"};
 function App() {
   return (
     <div className="App">
-      {/*       <header className="App-header">
-        <Title
-          title="Flying Pokémon"
-          img="https://cdn2.bulbagarden.net/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png"
-        />
-      </header>
-      <PokemonType type="grass" />
-      <PokemonImage
-        types={typesP}
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-      />
-      <PokemonDetail
-        name="Bulbasaur"
-        number="1"
-        gen="1-Kanto"
-        classification="Seed"
-        types={typesP}
-        abilities={abilP}
-      />
-      <PokemonInfo number="1" name="Bulbasaur" types={typesP} />
-      <SinglePokemon
-        name="Bulbasaur"
-        number="1"
-        gen="1-Kanto"
-        classification="Seed"
-        types={typesP}
-        abilities={abilP}
-        img="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-      /> */}
       <PokemonList
-        title="Flying Pokémon"
-        imgHeader="https://cdn2.bulbagarden.net/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png"
+        title={`${type.type} Type`}
+        imgHeader={type.imageUrl}
         pokemons={pokemon}
       />
     </div>
