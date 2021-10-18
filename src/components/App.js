@@ -6,6 +6,8 @@ import PokemonDetail from "./pokemon/PokemonDetail";
 import PokemonInfo from "./pokemon/PokemonInfo";
 import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
+import Search from "./search/Search";
+
 const pokemon = [
   {
     pokedexNumber: 1,
@@ -41,10 +43,13 @@ const pokemon = [
     abilities: ["Overgrow", "Chlorophyll"]
   }
 ];
+
+
 const type = {type: "Flying", imageUrl:"https://cdn2.bulbagarden.net/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png"};
 function App() {
   return (
     <div className="App">
+      <Search/>
       <PokemonList
         title={`${type.type} Type`}
         imgHeader={type.imageUrl}
