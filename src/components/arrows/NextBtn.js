@@ -1,8 +1,5 @@
 import React from 'react';
-
-import '../css/NextBtn.css';
-import PokemonType from "./PokemonType";
-import PokemonAbility from "./PokemonAbility";
+import '../../css/arrows/nextBtn.css';
 
 function NextBtn(props) {
  const { index, disabledNext, disabledPrev } = this.state

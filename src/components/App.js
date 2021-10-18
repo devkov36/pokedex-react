@@ -8,8 +8,8 @@ import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
 import PokeHeader from './header/PokeHeader';
 import Search from "./search/Search";
-import PokemonInfo from "./arrows/NextBtn";
-import PokemonInfo from "./arrows/PrevBtn";
+import NextBtn from "./arrows/NextBtn";
+import PrevBtn from "./arrows/PrevBtn";
 
 const pokemon = [
   {
@@ -68,11 +68,7 @@ const singlePokemon = [
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <PokeHeader />
-=======
       <Search />
->>>>>>> dec571190d02db4199413f97dec97c728d0a8e74
       <PokemonList
         title={`${type.type} Type`}
         imgHeader={type.imageUrl}

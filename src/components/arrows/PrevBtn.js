@@ -1,10 +1,7 @@
 import React from 'react';
+import '../../css/arrows/prevBtn.css';
 
-import '../css/PrevBtn.css';
-import PokemonType from "./PokemonType";
-import PokemonAbility from "./PokemonAbility";
-
-function NextBtn(props) {
+function PrevBtn(props) {
  const { index, disabledNext, disabledPrev } = this.state
  const profile = this.props.profiles ? this.props.profiles[index] : null
   return (
