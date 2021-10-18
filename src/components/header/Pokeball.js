@@ -1,11 +1,12 @@
 import React  from "react";
 import pokeBallStyle from '../../css/header/pokeball.css'
+import pokeball from '../../assets//pokeball.png'  //'./pokeball.png'
 
 // TODO: Agregar boton de pokebola
 // TODO: Agregar enlace o accion que hara al recibir un click
 function PokeBall(){
     return (
-    <div id="blue"></div>
+        <img src={pokeball} alt="Pokeball" id="pokeButton" />
     );
 }
 

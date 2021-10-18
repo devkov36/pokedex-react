@@ -6,21 +6,15 @@
 }
 
 #bar{
-    background-color: green;
-    clip-path: polygon(56% 0, 100% 0, 100% 100%, 0 100%, 0 10%, 36% 10%);
-    height: 1vh;
-    width: 96%;
-    background: rgb(143, 5, 5);
-    transform: translate(1vh, 4.2vh);
-    border-radius: 2vh 2vh 0 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 0% );
+    height: 10vh;
+    width: 100%;
+    background: #D62929;
 }
 
+
 .pokeHeader{
-    background-color: maroon;
-    padding: 20px
+    background-color: #D62929;
+    padding: 30px 30px 0px 50px
 }
 

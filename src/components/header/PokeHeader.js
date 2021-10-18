@@ -7,8 +7,10 @@ function PokeHeader(){
     return(
         <section>
         <header  id="leds" class="pokeHeader">
-            <PokeBall />
-        </header>        
+            <PokeBall />            
+        </header>   
+        <section id="bar"></section>  
+        <section id="shadow"></section>   
         </section>
     )
 }

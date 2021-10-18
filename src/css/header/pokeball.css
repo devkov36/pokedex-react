@@ -1,8 +1,13 @@
 #blue {
     background: rgb(17, 199, 255);
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     border-width: 1vh;
     border-style: outset;
     border-radius: 3em;
+}
+
+#pokeButton{
+    width: 90px;
+    height: 90px;
 }
