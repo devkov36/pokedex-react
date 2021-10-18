@@ -5,16 +5,50 @@
     border-style: outset;
 }
 
-#bar{
-    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 0% );
-    height: 10vh;
+#bar:before{
+    content: '';
+    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 5%, 100% 5%, 100% 0% );
+    height: 5vh;
     width: 100%;
-    background: #D62929;
+    background: #D62929;    
+    border-bottom-right-radius: 10px;
+    display: block;
+    position: absolute;
 }
 
+#bar{
+    clip-path: polygon( 0% 0%, 0% 100%, 31% 100%, 46% 15%, 100% 15%, 100% 0% );
+    height: 6vh;
+    width: 100%;
+    background: #691111;    
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+
+
+
+/* functional
+#bar{
+    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 0% );
+    height: 5vh;
+    width: 100%;
+    background: #D62929;    
+    border-bottom: maroon;
+    border-bottom-right-radius: 10px;
+}
+*/
 
 .pokeHeader{
     background-color: #D62929;
-    padding: 30px 30px 0px 50px
+    padding: 30px 30px 0px 50px;
+
 }
+/*
+#shadow{
+    clip-path: polygon( 0% 90%, 0% 100%, 35% 100%, 45% 5%, 100% 5%, 100% 0%, 40% 0%, 30% 95% );
+    height: 2vh;
+    background-color: maroon;
+
+}*/
 

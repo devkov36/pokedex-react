@@ -8,9 +8,11 @@ function PokeHeader(){
         <section>
         <header  id="leds" class="pokeHeader">
             <PokeBall />            
-        </header>   
-        <section id="bar"></section>  
-        <section id="shadow"></section>   
+        </header>  
+        <section id="container">
+            <section id="bar" ></section>  
+            <section id="shadow" ></section> 
+        </section>  
         </section>
     )
 }
