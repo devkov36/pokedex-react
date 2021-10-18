@@ -7,7 +7,6 @@ import PokemonInfo from "./pokemon/PokemonInfo";
 import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
 import PokeHeader from './header/PokeHeader';
-import Search from "./search/Search";
 import NextBtn from "./arrows/NextBtn";
 import PrevBtn from "./arrows/PrevBtn";
 
