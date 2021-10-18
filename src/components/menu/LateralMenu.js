@@ -58,7 +58,7 @@ const menu = [
 
 const style = {
   width: '100%',
-  height: '100%',
+  
   bgcolor: '#D9D9D9',
   color: 'black',
 };

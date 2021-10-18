@@ -68,16 +68,27 @@ const singlePokemon = [
     abilities: ["Overgrow", "Chlorophyll"],
   },
 ];
+
+const style = {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'flex-start',
+};
 function App() {
   return (
-    <div className="App">
-      <PokeHeader/>
-      <PokemonList
-        title={`${type.type} Type`}
-        imgHeader={type.imageUrl}
-        pokemons={pokemon}
-      />
-      <SinglePokemon singlePokemon={singlePokemon} />
+    <div className="App" style={style}>
+      <Box height="100vh" width="30%" display="flex" flexDirection="column" overflow="auto" backgroundColor="#D9D9D9">
+        <LateralMenu flex={1} overflow="auto" />
+      </Box>
+      <Container>
+        <PokeHeader />
+        <PokemonList
+          title={`${type.type} Type`}
+          imgHeader={type.imageUrl}
+          pokemons={pokemon}
+        />
+        <SinglePokemon singlePokemon={singlePokemon} />
+      </Container>
     </div>
   );
 }
