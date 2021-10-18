@@ -10,7 +10,6 @@ import LateralMenu from './menu/LateralMenu';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import PokeHeader from './header/PokeHeader';
-import Search from "./search/Search";
 import NextBtn from "./arrows/NextBtn";
 import PrevBtn from "./arrows/PrevBtn";
 
