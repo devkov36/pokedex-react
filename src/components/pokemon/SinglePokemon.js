@@ -4,17 +4,22 @@ import PokemonDetail from "./PokemonDetail";
 
 function SinglePokemon(props) {
   return (
-    <section className="pokemon-details">
-      <PokemonImage types={props.types} src={props.img} />
-      <PokemonDetail
-        name={props.name}
-        number={props.number}
-        gen={props.gen}
-        classification={props.classification}
-        types={props.types}
-        abilities={props.abilities}
-      />
-    </section>
+    <>
+      {props.singlePokemon.map((pokemon, index) => (
+        <section className="pokemon-details">
+          <PokemonImage types={pokemon.types} src={pokemon.imageUrl} />
+          <PokemonDetail
+            name={pokemon.name}
+            number={pokemon.pokedexNumber}
+            gen={pokemon.gen}
+            classification={pokemon.classification}
+            types={pokemon.types}
+            abilities={pokemon.abilities}
+            key={index}
+          />
+        </section>
+      ))}
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import searchIcon from "./searchIcon.png"
+
+import SearchIcon from '@mui/icons-material/Search';
 
 import "../../css/search/searchBtn.css";
 
@@ -7,7 +8,7 @@ class SearchBtn extends Component {
     render() {
       return (
         <button className="button">
-            <img src={searchIcon} alt="hola"></img>
+            <SearchIcon style={{fontSize:"150%"}}/>
         </button>
       );
     }
