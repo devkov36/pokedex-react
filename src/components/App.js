@@ -1,17 +1,11 @@
 import React from "react";
-import Title from "./pokemon/Title";
-import PokemonType from "./pokemon/PokemonType";
-import PokemonImage from "./pokemon/PokemonImage";
-import PokemonDetail from "./pokemon/PokemonDetail";
-import PokemonInfo from "./pokemon/PokemonInfo";
-import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
-import LateralMenu from './menu/LateralMenu';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import PokeHeader from './header/PokeHeader';
-import NextBtn from "./arrows/NextBtn";
-import PrevBtn from "./arrows/PrevBtn";
+import LateralMenu from "./menu/LateralMenu";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import PokeHeader from "./header/PokeHeader";
+import { Grid } from "@mui/material";
+import "../css/index.css";
 
 const pokemon = [
   {
@@ -69,24 +63,31 @@ const singlePokemon = [
 ];
 
 const style = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'flex-start',
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-start",
 };
 function App() {
   return (
-    <div className="App" style={style}>
-      <Box height="100vh" width="30%" display="flex" flexDirection="column" overflow="auto" backgroundColor="#D9D9D9">
-        <LateralMenu flex={1} overflow="auto" />
-      </Box>
-      <Container>
+    <div className="App">
+      <Container disableGutters maxWidth={false}>
         <PokeHeader />
-        <PokemonList
-          title={`${type.type} Type`}
-          imgHeader={type.imageUrl}
-          pokemons={pokemon}
-        />
-        <SinglePokemon singlePokemon={singlePokemon} />
+        <Grid container spacing={0}>
+          <Grid item xs={2.5}>
+            <Box height="78vh" overflow="auto" backgroundColor="#D9D9D9">
+              <LateralMenu />
+            </Box>
+          </Grid>
+          <Grid pl="16px" item xs={9.5}>
+            <Box>
+              <PokemonList
+                title={`${type.type} Type`}
+                imgHeader={type.imageUrl}
+                pokemons={pokemon}
+              />
+            </Box>
+          </Grid>
+        </Grid>
       </Container>
     </div>
   );
