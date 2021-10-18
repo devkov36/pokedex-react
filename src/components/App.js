@@ -6,6 +6,8 @@ import PokemonDetail from "./pokemon/PokemonDetail";
 import PokemonInfo from "./pokemon/PokemonInfo";
 import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
+import PokeHeader from './header/PokeHeader';
+
 const pokemon = [
   {
     pokedexNumber: 1,
@@ -45,6 +47,7 @@ const type = {type: "Flying", imageUrl:"https://cdn2.bulbagarden.net/upload/thum
 function App() {
   return (
     <div className="App">
+      <PokeHeader />
       <PokemonList
         title={`${type.type} Type`}
         imgHeader={type.imageUrl}
