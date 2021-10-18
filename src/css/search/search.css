@@ -1,0 +1,20 @@
+.input {
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+
+.input:active {
+    border: none;
+    outline: none;
+}
+
+.search {
+    border: 1px solid black;
+    border-radius: 25px;
+    height: 45px;
+    float: right;
+    width: 42%;
+    margin-right: 7%;
+}

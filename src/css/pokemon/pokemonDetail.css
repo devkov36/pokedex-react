@@ -1,0 +1,47 @@
+.detail-name-number {
+  display: flex;
+  align-items: center;
+}
+.detail-name {
+  margin: 0px 8px;
+}
+.detail-number {
+  margin: 0px;
+  color: #737373;
+}
+
+.detail-gen {
+  display: flex;
+  align-items: center;
+}
+.gen-title {
+  margin: 0px 8px;
+}
+.gen-name {
+  margin: 0px;
+}
+.detail-clas {
+  display: flex;
+  align-items: center;
+}
+.clas-title {
+  margin: 0px 8px;
+}
+.clas-name {
+  margin: 0px;
+}
+.type-title {
+  margin: 8px 8px;
+}
+.type-tags {
+  display: flex;
+}
+.abil-title {
+  margin: 8px 8px;
+}
+.abilities {
+  display: flex;
+}
+.ability {
+  margin: 0px 8px;
+}
