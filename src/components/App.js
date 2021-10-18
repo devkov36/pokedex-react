@@ -6,6 +6,8 @@ import PokemonDetail from "./pokemon/PokemonDetail";
 import PokemonInfo from "./pokemon/PokemonInfo";
 import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
+import Search from "./search/Search";
+
 const pokemon = [
   {
     pokedexNumber: 1,
@@ -63,6 +65,7 @@ const singlePokemon = [
 function App() {
   return (
     <div className="App">
+      <Search />
       <PokemonList
         title={`${type.type} Type`}
         imgHeader={type.imageUrl}
