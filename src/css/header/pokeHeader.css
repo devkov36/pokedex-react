@@ -3,22 +3,24 @@
     height: 2em;
     border-width: 0.3vh;
     border-style: outset;
+    
 }
 
 #bar:before{
     content: '';
-    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 5%, 100% 5%, 100% 0% );
-    height: 5vh;
+    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 5%, 100% 5%, 100% -20%);
+    height: 11vh;
     width: 100%;
     background: #D62929;    
     border-bottom-right-radius: 10px;
     display: block;
     position: absolute;
+    border-bottom: blue;
 }
 
 #bar{
-    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 15%, 100% 15%, 100% 0% );
-    height: 6vh;
+    clip-path: polygon( 0% 0%, 0% 100%, 30% 100%, 45% 15%, 100% 15%, 100% -20% );
+    height: 12vh;
     width: 100%;
     background: #691111;    
     border-bottom-right-radius: 10px;
@@ -28,6 +30,9 @@
 .pokeHeader{
     background-color: #D62929;
     padding: 30px 30px 0px 50px;
-
+    height: 5vh;
 }
 
+.search {
+    margin-top: 52px;
+}

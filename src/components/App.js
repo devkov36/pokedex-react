@@ -68,7 +68,7 @@ const singlePokemon = [
 function App() {
   return (
     <div className="App">
-      <Search />
+      <PokeHeader/>
       <PokemonList
         title={`${type.type} Type`}
         imgHeader={type.imageUrl}
