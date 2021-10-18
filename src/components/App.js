@@ -7,6 +7,8 @@ import PokemonInfo from "./pokemon/PokemonInfo";
 import SinglePokemon from "./pokemon/SinglePokemon";
 import PokemonList from "./pokemon/PokemonList";
 import Search from "./search/Search";
+import PokemonInfo from "./arrows/NextBtn";
+import PokemonInfo from "./arrows/PrevBtn";
 
 const pokemon = [
   {
