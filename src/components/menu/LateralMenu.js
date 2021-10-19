@@ -1,7 +1,6 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import Container from '@mui/material/Container';
-
+import { ListItemButton, ListItemText } from '@mui/material';
 import ListItem from './ListItem';
 
 const menu = [
@@ -58,17 +57,19 @@ const menu = [
 
 const style = {
   width: '100%',
-  
   bgcolor: '#D9D9D9',
   color: 'black',
 };
 
 export default function LateralMenu() {
   return (
-      <List sx={style}
+      <List disablePadding={true} sx={style}
         component="nav">
-          {menu.map(menuItem => (
-            <ListItem title={menuItem.title}
+      <ListItemButton>
+        <ListItemText primary="Home" />
+      </ListItemButton>
+          {menu.map((menuItem, index) => (
+            <ListItem key={index} title={menuItem.title}
               submenu={menuItem.children}/>
           ))}
       </List>
