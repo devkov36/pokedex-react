@@ -2,6 +2,7 @@ import * as React from 'react';
 import List from '@mui/material/List';
 import { ListItemButton, ListItemText } from '@mui/material';
 import ListItem from './ListItem';
+import { Link } from 'react-router-dom';
 
 const menu = [
   {
@@ -65,9 +66,11 @@ export default function LateralMenu() {
   return (
       <List disablePadding={true} sx={style}
         component="nav">
-      <ListItemButton>
-        <ListItemText primary="Home" />
-      </ListItemButton>
+      <Link to="/">
+        <ListItemButton>
+          <ListItemText primary="Home" />
+        </ListItemButton>
+      </Link>
           {menu.map((menuItem, index) => (
             <ListItem key={index} title={menuItem.title}
               submenu={menuItem.children}/>

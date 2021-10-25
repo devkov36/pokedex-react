@@ -2,6 +2,7 @@ import "../../css/pokemon/pokemonList.css";
 import PokemonCard from "./PokemonCard";
 import Title from "./Title";
 import { Grid } from "@mui/material";
+import PropTypes from "prop-types";
 
 function PokemonList(props) {
   const pokemons = props.pokemons;
@@ -30,5 +31,11 @@ function PokemonList(props) {
     </div>
   );
 }
+
+PokemonList.propTypes = {
+  title: PropTypes.string.isRequired,
+  imgHeader: PropTypes.string,
+  pokemons: PropTypes.array.isRequired,
+};
 
 export default PokemonList;

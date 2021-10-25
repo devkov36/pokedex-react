@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../../css/pokemon/title.css";
 
 function Title(props) {
@@ -13,5 +14,10 @@ function Title(props) {
   }
   return <h1 className="title-line">{props.title}</h1>;
 }
+
+Title.prototype = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string
+};
 
 export default Title;

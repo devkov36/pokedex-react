@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Grid, Container, Box  } from "@mui/material";
+import {BrowserRouter, Route} from 'react-router-dom'
 import PokemonList from "./pokemon/PokemonList";
 import LateralMenu from "./menu/LateralMenu";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
 import PokeHeader from "./header/PokeHeader";
-import { Grid } from "@mui/material";
 import "../css/index.css";
+import SinglePokemon from "./pokemon/SinglePokemon";
 
 const URL = "https://pokemon-bedu.herokuapp.com/v1/pokemons";
 
@@ -21,6 +21,7 @@ function App() {
     getData();
   }, []);
   return (
+    <BrowserRouter>
     <div className="App">
       <Container disableGutters maxWidth={false}>
         <PokeHeader />
@@ -32,12 +33,14 @@ function App() {
           </Grid>
           <Grid pl="16px" item xs={10}>
             <Box>
-              <PokemonList title={`All Pokemón`} pokemons={pokemon} />
+              <Route path="/" exact render={()=> <PokemonList title={`All Pokemón`} pokemons={pokemon} />} />
+              <Route path="/:id" render={({match})=> <SinglePokemon id={match.params.id} />} />
             </Box>
           </Grid>
         </Grid>
       </Container>
     </div>
+    </BrowserRouter>
   );
 }
 

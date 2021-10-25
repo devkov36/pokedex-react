@@ -1,6 +1,7 @@
 import "../../css/pokemon/pokemonDetail.css";
 import PokemonType from "./PokemonType";
 import PokemonAbility from "./PokemonAbility";
+import PropTypes from "prop-types";
 
 function PokemonDetail(props) {
   return (
@@ -19,9 +20,10 @@ function PokemonDetail(props) {
       </div>
       <h3 className="type-title">Type: </h3>
       <div className="type-tags">
-        {props.types.map((type, index) => (
-          <PokemonType type={type} key={index} />
-        ))}
+          { props.types[0] === props.types[1] 
+          ? <PokemonType type={props.types[0]} />
+          : props.types.map((type, index) => (<PokemonType type={type} key={index} />))
+        }
       </div>
       <h3 className="abil-title">Abilities: </h3>
       <div className="abilities">
@@ -32,5 +34,14 @@ function PokemonDetail(props) {
     </div>
   );
 }
+
+PokemonDetail.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
+  gen: PropTypes.number.isRequired,
+  classification: PropTypes.string.isRequired,
+  types: PropTypes.array.isRequired,
+  abilities: PropTypes.array.isRequired
+};
 
 export default PokemonDetail;
