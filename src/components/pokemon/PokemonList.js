@@ -12,7 +12,7 @@ function PokemonList(props) {
   return (
     <div className="pokemon-list">
       <header className="pokemon-list-header">
-        <Title title={props.title} img={props.imgHeader} />
+        <Title page={props.page} title={props.title} img={props.imgHeader} />
       </header>
       <section>
         <Grid container spacing={2}>

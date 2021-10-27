@@ -5,21 +5,18 @@ import { BrowserRouter, Route } from "react-router-dom";
 import PokemonList from "./pokemon/PokemonList";
 import LateralMenu from "./menu/LateralMenu";
 import PokeHeader from "./header/PokeHeader";
-import "../css/index.css";
 import SinglePokemon from "./pokemon/SinglePokemon";
-
-const URL = "https://pokemon-bedu.herokuapp.com/v1/pokemons";
+import { getAllPokemons } from "../services/getAllPokemons";
+import "../css/index.css";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
   useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(URL);
-      const dataPokemon = await response.json();
+    getAllPokemons().then((dataPokemon) => {
       setPokemon(dataPokemon);
-    };
-    getData();
+    });
   }, []);
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -37,7 +34,7 @@ function App() {
                   path="/"
                   exact
                   render={() => (
-                    <PokemonList title={"home"} pokemons={pokemon} />
+                    <PokemonList page="home" title="Home" pokemons={pokemon} />
                   )}
                 />
                 <Route
@@ -48,12 +45,31 @@ function App() {
                   path="/type/:type"
                   render={({ match }) => (
                     <PokemonList
-                      {...match}
+                      page="type"
                       title={match.params.type}
                       pokemons={pokemon.filter(
                         (pokemon) =>
                           pokemon.types[0] === match.params.type ||
                           pokemon.types[1] === match.params.type
+                      )}
+                    />
+                  )}
+                />
+                <Route
+                  path="/search/:search"
+                  render={({ match }) => (
+                    <PokemonList
+                      page="search"
+                      title={match.params.search}
+                      pokemons={pokemon.filter(
+                        (pokemon) =>
+                          pokemon.name.includes(match.params.search) ||
+                          pokemon.pokedexNumber
+                            .toString()
+                            .includes(match.params.search) ||
+                          pokemon.types[0] ===
+                            match.params.search.toLowerCase() ||
+                          pokemon.types[1] === match.params.search.toLowerCase()
                       )}
                     />
                   )}
