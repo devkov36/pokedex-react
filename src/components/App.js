@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Grid, Container, Box  } from "@mui/material";
-import {BrowserRouter, Route} from 'react-router-dom'
+import { Grid, Container, Box } from "@mui/material";
+import { BrowserRouter, Route } from "react-router-dom";
 import PokemonList from "./pokemon/PokemonList";
 import LateralMenu from "./menu/LateralMenu";
 import PokeHeader from "./header/PokeHeader";
@@ -22,24 +22,47 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-    <div className="App">
-      <Container disableGutters maxWidth={false}>
-        <PokeHeader />
-        <Grid container spacing={0}>
-          <Grid item xs={2}>
-            <Box height="100%" overflow="auto" backgroundColor="#D9D9D9">
-              <LateralMenu />
-            </Box>
+      <div className="App">
+        <Container disableGutters maxWidth={false}>
+          <PokeHeader />
+          <Grid container spacing={0}>
+            <Grid item xs={2}>
+              <Box height="100%" overflow="auto" backgroundColor="#D9D9D9">
+                <LateralMenu />
+              </Box>
+            </Grid>
+            <Grid pl="16px" item xs={10}>
+              <Box>
+                <Route
+                  path="/"
+                  exact
+                  render={() => (
+                    <PokemonList title={"home"} pokemons={pokemon} />
+                  )}
+                />
+                <Route
+                  path="/pokemon/:id"
+                  render={({ match }) => <SinglePokemon id={match.params.id} />}
+                />
+                <Route
+                  path="/type/:type"
+                  render={({ match }) => (
+                    <PokemonList
+                      {...match}
+                      title={match.params.type}
+                      pokemons={pokemon.filter(
+                        (pokemon) =>
+                          pokemon.types[0] === match.params.type ||
+                          pokemon.types[1] === match.params.type
+                      )}
+                    />
+                  )}
+                />
+              </Box>
+            </Grid>
           </Grid>
-          <Grid pl="16px" item xs={10}>
-            <Box>
-              <Route path="/" exact render={()=> <PokemonList title={`All Pokemón`} pokemons={pokemon} />} />
-              <Route path="/:id" render={({match})=> <SinglePokemon id={match.params.id} />} />
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
+        </Container>
+      </div>
     </BrowserRouter>
   );
 }

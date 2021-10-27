@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function PokemonInfo(props) {
   return (
     <div className="info-text">
-    <Link className="info-text" to={`/${props.pokedexNumber}`}>
+    <Link className="info-text" to={`/pokemon/${props.pokedexNumber}`}>
       <h2 className="number"># {props.pokedexNumber}</h2>
       <h2 className="name">{props.name}</h2>
     </Link>

@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 function PokemonCard(props) {
   return (
     <section className="pokemon-card">
-      <Link to={`/${props.pokedexNumber}`}>
+      <Link to={`/pokemon/${props.pokedexNumber}`}>
         <PokemonImage types={props.types} src={props.imageUrl} />
       </Link>
         <PokemonInfo
