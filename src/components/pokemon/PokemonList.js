@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 function PokemonList(props) {
   const pokemons = props.pokemons;
-  const orderedPokemons = pokemons.sort(function (a, b) {
+  const orderedPokemons = pokemons.sort((a, b) => {
     return a.pokedexNumber - b.pokedexNumber;
   });
   return (
@@ -16,7 +16,7 @@ function PokemonList(props) {
       </header>
       <section>
         <Grid container spacing={2}>
-          {orderedPokemons.slice(0, 52).map((pokemon, index) => (
+          {orderedPokemons.map((pokemon, index) => (
             <Grid key={index} item xs={3}>
               <PokemonCard
                 imageUrl={pokemon.imageUrl}

@@ -2,25 +2,22 @@ import { useState, useEffect } from "react";
 import "../../css/pokemon/singlePokemon.css";
 import PokemonImage from "./PokemonImage";
 import PokemonDetail from "./PokemonDetail";
+import { getSinglePokemon } from "../../services/getPokemonInfo";
 import PropTypes from "prop-types";
 
-const URLsinglePokemon = "https://pokemon-bedu.herokuapp.com/v1/pokemons/";
 function SinglePokemon(props) {
   const [single, setSingle] = useState([]);
   useEffect(() => {
-    const getDataSinglePokemon = async (id) => {
-      const response = await fetch(URLsinglePokemon + id);
-      const dataPokemon = await response.json();
+    getSinglePokemon(props.id).then((dataPokemon) => {
       setSingle(dataPokemon);
-    };
-    getDataSinglePokemon(props.id);
+    });
   }, [props.id]);
   const pokemon = single;
   return (
     <>
       {pokemon.length === 0 ? (
         <section className="pokemon-details">
-        <h1>Loading...</h1>
+          <h1>Loading...</h1>
         </section>
       ) : (
         <section className="pokemon-details">

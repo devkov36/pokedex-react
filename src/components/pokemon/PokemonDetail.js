@@ -12,12 +12,18 @@ function PokemonDetail(props) {
         <h1 className="detail-number"># {props.number}</h1>
       </div>
       <div className="detail-gen">
-        <h3 className="gen-title">Generación: </h3>
+        <h3 className="gen-title">Generation: </h3>
         <p className="gen-name">{props.gen}</p>
       </div>
       <div className="detail-clas">
         <h3 className="clas-title">Classification: </h3>
-        <p className="clas-name">{props.classification}</p>
+        <p className="clas-name">
+          {
+            <Link to={`/class/${props.classification}`}>
+              {props.classification}
+            </Link>
+          }
+        </p>
       </div>
       <h3 className="type-title">Type: </h3>
       <div className="type-tags">
@@ -35,7 +41,7 @@ function PokemonDetail(props) {
       </div>
       <h3 className="abil-title">Abilities: </h3>
       <div className="abilities">
-        {props.abilities.map((ability, index) => (
+        {props.abilities.slice(0, 3).map((ability, index) => (
           <PokemonAbility ability={ability} key={index} />
         ))}
       </div>

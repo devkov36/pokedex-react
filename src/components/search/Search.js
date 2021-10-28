@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SearchBtn from "./SearchBtn";
+import { capitalizeStrings } from "../../utils/capitalizeStrings";
 
 import "../../css/search/search.css";
 
 function Search() {
   const [search, setSearch] = useState("");
-
-  const capitalizeStrings = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
   const formatSearch = capitalizeStrings(search.toLowerCase().trim());
 
   return (
@@ -16,8 +13,11 @@ function Search() {
       <input
         type="text"
         className="input"
-        placeholder="Search by name, number or type"
-        onInput={(e) => setSearch(e.target.value ? e.target.value : "404")}
+        placeholder="Search by name, number, type or classification"
+        onFocus={(e) => (e.target.value = "")}
+        onChange={(e) =>
+          setSearch(e.target.value ? e.target.value : "No results")
+        }
       />
       <SearchBtn search={formatSearch} />
     </form>
