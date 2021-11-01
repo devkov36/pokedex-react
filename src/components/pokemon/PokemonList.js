@@ -9,10 +9,23 @@ function PokemonList(props) {
   const orderedPokemons = pokemons.sort((a, b) => {
     return a.pokedexNumber - b.pokedexNumber;
   });
+
+  const classificationList = orderedPokemons.map(
+    (pokemon) => pokemon.classification
+  );
+  const classificationFilter = classificationList.filter(
+    (classification, index, self) => self.indexOf(classification) === index
+  );
+  console.log(classificationFilter);
   return (
     <div className="pokemon-list">
       <header className="pokemon-list-header">
-        <Title page={props.page} title={props.title} img={props.imgHeader} />
+        <Title
+          list={classificationFilter}
+          page={props.page}
+          title={props.title}
+          img={props.imgHeader}
+        />
       </header>
       <section>
         <Grid container spacing={2}>

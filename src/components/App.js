@@ -79,24 +79,30 @@ function App() {
                   <Route
                     path="/search/:search"
                     render={({ match }) => (
-                      <PokemonList
-                        page="search"
-                        title={match.params.search}
-                        pokemons={pokemon.filter(
-                          (pokemon) =>
-                            pokemon.name.includes(match.params.search) ||
-                            pokemon.classification.includes(
-                              match.params.search
-                            ) ||
-                            pokemon.pokedexNumber
-                              .toString()
-                              .includes(match.params.search) ||
-                            pokemon.types[0] ===
-                              match.params.search.toLowerCase() ||
-                            pokemon.types[1] ===
-                              match.params.search.toLowerCase()
-                        )}
-                      />
+                      <>
+                        <PokemonList
+                          page="search"
+                          title={match.params.search}
+                          pokemons={pokemon.filter(
+                            (pokemon) =>
+                              pokemon.name.includes(match.params.search) ||
+                              pokemon.pokedexNumber
+                                .toString()
+                                .includes(match.params.search) ||
+                              pokemon.types[0] ===
+                                match.params.search.toLowerCase() ||
+                              pokemon.types[1] ===
+                                match.params.search.toLowerCase()
+                          )}
+                        />
+                        <PokemonList
+                          page="classification"
+                          title={match.params.search}
+                          pokemons={pokemon.filter((pokemon) =>
+                            pokemon.classification.includes(match.params.search)
+                          )}
+                        />
+                      </>
                     )}
                   />
                 </Switch>
