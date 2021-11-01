@@ -16,3 +16,8 @@
   display: flex;
   text-transform: capitalize;
 }
+
+.info-tags > * {
+    text-decoration: none;
+    color: white;
+}
