@@ -13,7 +13,7 @@ function Search() {
       <input
         type="text"
         className="input"
-        placeholder="Search by name, number, type or classification"
+        placeholder="Search by name or Pokedex number"
         onFocus={(e) => (e.target.value = "")}
         onChange={(e) =>
           setSearch(e.target.value ? e.target.value : "No results")

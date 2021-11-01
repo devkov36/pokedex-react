@@ -41,7 +41,7 @@ function PokemonDetail(props) {
       </div>
       <h3 className="abil-title">Abilities: </h3>
       <div className="abilities">
-        {props.abilities.slice(0, 3).map((ability, index) => (
+        {props.abilities.map((ability, index) => (
           <PokemonAbility ability={ability} key={index} />
         ))}
       </div>
