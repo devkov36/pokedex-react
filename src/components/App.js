@@ -1,94 +1,117 @@
 import React from "react";
-import Title from "./pokemon/Title";
-import PokemonType from "./pokemon/PokemonType";
-import PokemonImage from "./pokemon/PokemonImage";
-import PokemonDetail from "./pokemon/PokemonDetail";
-import PokemonInfo from "./pokemon/PokemonInfo";
-import SinglePokemon from "./pokemon/SinglePokemon";
+import { useState, useEffect } from "react";
+import { Grid, Container, Box } from "@mui/material";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PokemonList from "./pokemon/PokemonList";
-import LateralMenu from './menu/LateralMenu';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import PokeHeader from './header/PokeHeader';
-import NextBtn from "./arrows/NextBtn";
-import PrevBtn from "./arrows/PrevBtn";
+import LateralMenu from "./menu/LateralMenu";
+import PokeHeader from "./header/PokeHeader";
+import SinglePokemon from "./pokemon/SinglePokemon";
+import { getAllPokemons } from "../services/getPokemonInfo";
+import "../css/index.css";
 
-const pokemon = [
-  {
-    pokedexNumber: 1,
-    name: "Bulbasaur",
-    classification: "Seed",
-    gen: 1,
-    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    types: ["grass"],
-    abilities: ["Overgrow", "Chlorophyll"],
-  },
-  {
-    pokedexNumber: 2,
-    name: "Bulbasaur2",
-    classification: "Seed",
-    gen: 1,
-    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    types: ["flying"],
-    abilities: ["Overgrow", "Chlorophyll"],
-  },
-  {
-    pokedexNumber: 3,
-    name: "Bulbasaur3",
-    classification: "Seed",
-    gen: 1,
-    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    types: ["grass", "poison"],
-    abilities: ["Overgrow", "Chlorophyll"],
-  },
-  {
-    pokedexNumber: 4,
-    name: "Bulbasaur4",
-    classification: "Seed",
-    gen: 1,
-    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    types: ["electric"],
-    abilities: ["Overgrow", "Chlorophyll"],
-  },
-];
-const type = {
-  type: "Flying",
-  imageUrl:
-    "https://cdn2.bulbagarden.net/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png",
-};
-const singlePokemon = [
-  {
-    pokedexNumber: 1,
-    name: "Bulbasaur",
-    classification: "Seed",
-    gen: 1,
-    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    types: ["grass"],
-    abilities: ["Overgrow", "Chlorophyll"],
-  },
-];
-
-const style = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'flex-start',
-};
 function App() {
+  const [pokemon, setPokemon] = useState([]);
+
+  //Get all pokemons from API by importing the getAllPokemons function
+  useEffect(() => {
+    getAllPokemons().then((dataPokemon) => {
+      setPokemon(dataPokemon);
+    });
+  }, []);
   return (
-    <div className="App" style={style}>
-      <Box height="100vh" width="30%" display="flex" flexDirection="column" overflow="auto" backgroundColor="#D9D9D9">
-        <LateralMenu flex={1} overflow="auto" />
-      </Box>
-      <Container>
-        <PokeHeader />
-        <PokemonList
-          title={`${type.type} Type`}
-          imgHeader={type.imageUrl}
-          pokemons={pokemon}
-        />
-        <SinglePokemon singlePokemon={singlePokemon} />
-      </Container>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Container disableGutters maxWidth={false}>
+          <PokeHeader />
+          <Grid container spacing={0}>
+            <Grid item xs={2}>
+              <Box height="100%" overflow="auto" backgroundColor="#D9D9D9">
+                <LateralMenu />
+              </Box>
+            </Grid>
+            <Grid pl="16px" item xs={10}>
+              <Box>
+                <Switch>
+                  <Route
+                    path="/"
+                    exact
+                    render={() => (
+                      <PokemonList
+                        page="home"
+                        title="Home"
+                        pokemons={pokemon}
+                      />
+                    )}
+                  />
+                  <Route
+                    path="/pokemon/:id"
+                    render={({ match }) => (
+                      <SinglePokemon id={match.params.id} />
+                    )}
+                  />
+                  <Route
+                    path="/type/:type"
+                    render={({ match }) => (
+                      <PokemonList
+                        page="type"
+                        title={match.params.type}
+                        pokemons={pokemon.filter(
+                          (pokemon) =>
+                            pokemon.types[0] === match.params.type ||
+                            pokemon.types[1] === match.params.type
+                        )}
+                      />
+                    )}
+                  />
+                  <Route
+                    path="/class/:class"
+                    render={({ match }) => (
+                      <PokemonList
+                        page="classification"
+                        title={match.params.class}
+                        pokemons={pokemon.filter(
+                          (pokemon) =>
+                            pokemon.classification === match.params.class
+                        )}
+                      />
+                    )}
+                  />
+                  <Route
+                    path="/search/:search"
+                    render={({ match }) => (
+                      <>
+                        <PokemonList
+                          page="search"
+                          title={match.params.search}
+                          pokemons={pokemon.filter(
+                            (pokemon) =>
+                              pokemon.name.includes(match.params.search) ||
+                              pokemon.pokedexNumber
+                                .toString()
+                                .includes(match.params.search) ||
+                              pokemon.types[0] ===
+                                match.params.search.toLowerCase() ||
+                              pokemon.types[1] ===
+                                match.params.search.toLowerCase()
+                          )}
+                        />
+                        <PokemonList
+                          page="classification"
+                          title={match.params.search}
+                          pokemons={pokemon.filter((pokemon) =>
+                            pokemon.classification.includes(match.params.search)
+                          )}
+                        />
+                      </>
+                    )}
+                  />
+                </Switch>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
+    </BrowserRouter>
   );
 }
 
