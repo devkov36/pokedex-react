@@ -1,5 +1,5 @@
 import React from 'react';
-import headerStyle from '../../css/header/pokeHeader.css'
+import '../../css/header/pokeHeader.css'
 import PokeBall from './Pokeball.js';
 import Search from "../search/Search";
 
@@ -8,9 +8,9 @@ import Search from "../search/Search";
 function PokeHeader(){
     return(
         <section>
-        <header  id="leds" class="pokeHeader">
+        <header  id="leds" className="pokeHeader">
             <PokeBall /> 
-            <Search class="search"/>          
+            <Search className="search"/>          
         </header>  
         <section id="container">
             <section id="bar" ></section>  

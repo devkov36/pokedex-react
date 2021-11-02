@@ -1,5 +1,5 @@
 import React  from "react";
-import pokeBallStyle from '../../css/header/pokeball.css'
+import '../../css/header/pokeball.css'
 import pokeball from '../../assets//pokeball.png'  //'./pokeball.png'
 
 // TODO: Agregar boton de pokebola
