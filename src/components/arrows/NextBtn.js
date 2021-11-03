@@ -1,16 +1,17 @@
 import React from 'react';
 import '../../css/arrows/nextBtn.css';
-
+import { Link } from "react-router-dom";
 class NextBtn extends React.Component {
-  render(props) {
+  render() {
     //const { index, disabledNext, disabledPrev } = this.state
     //const profile = this.props.profiles ? this.props.profiles[index] : null
     return (
       <div  >
-        <p><i className="arrow right">
-          
+        <Link to={`/pokemon/${this.props.id}`} activeClassName="active">
+        <p><i className="arrow right">          
         </i>
         </p>
+        </Link>
       </div>
     )
   };
