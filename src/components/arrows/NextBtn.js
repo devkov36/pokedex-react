@@ -1,18 +1,19 @@
 import React from 'react';
 import '../../css/arrows/nextBtn.css';
 
-function NextBtn(props) {
- const { index, disabledNext, disabledPrev } = this.state
- const profile = this.props.profiles ? this.props.profiles[index] : null
-  return (
-    <div className="arrow">
-        <p><i className="arrow right">     
-         <NextBtn toggle={(e) => this.toggleNext(e)} active={disabledNext} />
+class NextBtn extends React.Component {
+  render(props) {
+    //const { index, disabledNext, disabledPrev } = this.state
+    //const profile = this.props.profiles ? this.props.profiles[index] : null
+    return (
+      <div  >
+        <p><i className="arrow right">
+          
         </i>
         </p>
-  </div>
-  )
-};
+      </div>
+    )
+  };
 
-
+}
 export default NextBtn

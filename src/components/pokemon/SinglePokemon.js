@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "../../css/pokemon/singlePokemon.css";
 import PokemonImage from "./PokemonImage";
 import PokemonDetail from "./PokemonDetail";
+import NextBtn from "../arrows/NextBtn";
+import PrevBtn from "../arrows/PrevBtn";
 import { getSinglePokemon } from "../../services/getPokemonInfo";
 import PropTypes from "prop-types";
 
@@ -21,6 +23,7 @@ function SinglePokemon(props) {
         </section>
       ) : (
         <section className="pokemon-details">
+          <PrevBtn/>  
           <PokemonImage types={pokemon.types} src={pokemon.imageUrl} />
           <PokemonDetail
             name={pokemon.name}
@@ -30,7 +33,9 @@ function SinglePokemon(props) {
             types={pokemon.types}
             abilities={pokemon.abilities}
           />
+          <NextBtn/>  
         </section>
+        
       )}
     </>
   );

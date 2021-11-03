@@ -1,18 +1,18 @@
 import React from 'react';
 import '../../css/arrows/prevBtn.css';
+class PrevBtn extends React.Component {
+//  state = { disabledPrev: false };
 
-function PrevBtn(props) {
- const { index, disabledNext, disabledPrev } = this.state
- const profile = this.props.profiles ? this.props.profiles[index] : null
-  return (
-    <div className="arrow">
-        <p><i className="arrow left">     
-         <PrevBtn toggle={(e) => this.toggleNext(e)} active={disabledNext} />
+  render(props) {
+    
+    return (
+      <div>
+        <p><i className="arrow left">          
         </i>
         </p>
-  </div>
-  )
-};
+      </div>
+    )
+  };
 
-
+}
 export default PrevBtn
