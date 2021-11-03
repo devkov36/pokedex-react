@@ -12,13 +12,13 @@ function Search() {
       <input
         type="text"
         className="input"
-        placeholder="Search by name or Pokedex number"
+        placeholder="Search"
         onFocus={(e) => (e.target.value = "")}
         onChange={(e) =>
           setSearch(e.target.value ? e.target.value : "Empty search")
         }
       />
-      <SearchBtn search={formatSearch} />
+      <SearchBtn search={formatSearch}/>
     </form>
   );
 }
