@@ -10,7 +10,7 @@ class PrevBtn extends React.Component {
       
       <div>
         
-        <Link to={`/pokemon/${this.props.id}`} activeClassName="active">
+        <Link to={`/pokemon/${this.props.id}`} activeclassname="active">
         <p><i className="arrow left">          
         </i>
         </p>

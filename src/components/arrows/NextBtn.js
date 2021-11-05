@@ -7,7 +7,7 @@ class NextBtn extends React.Component {
     //const profile = this.props.profiles ? this.props.profiles[index] : null
     return (
       <div  >
-        <Link to={`/pokemon/${this.props.id}`} activeClassName="active">
+        <Link to={`/pokemon/${this.props.id}`} activeclassname="active">
         <p><i className="arrow right">          
         </i>
         </p>

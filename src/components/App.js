@@ -24,7 +24,7 @@ function App() {
         <Container disableGutters maxWidth={false}>
           <PokeHeader />
           <Grid container spacing={0}>
-            <Grid item xs={0} sm={3} md={2}>
+            <Grid item sm={3} md={2}>
               <div
                 style={{
                   minHeight: "78vh",
