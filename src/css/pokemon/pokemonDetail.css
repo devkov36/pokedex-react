@@ -30,12 +30,20 @@
 .clas-name {
   margin: 0px;
 }
+.clas-name > * {
+  text-decoration: none;
+  color: #737373;
+}
 .type-title {
   margin: 8px 8px;
 }
 .type-tags {
   display: flex;
   text-transform: capitalize;
+}
+.type-tags > * {
+  text-decoration: none;
+  color: white;
 }
 .abil-title {
   margin: 8px 8px;

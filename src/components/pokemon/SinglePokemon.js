@@ -22,8 +22,9 @@ function SinglePokemon(props) {
           <h1>Loading...</h1>
         </section>
       ) : (
-        <section className="pokemon-details">
-          <PrevBtn  id={pokemon.pokedexNumber-1}/>  
+        <section className="pokemon-arrows">
+          <PrevBtn  id={pokemon.pokedexNumber-1}/>
+          <div className="pokemon-details">  
           <PokemonImage types={pokemon.types} src={pokemon.imageUrl} />
           <PokemonDetail
             name={pokemon.name}
@@ -33,6 +34,7 @@ function SinglePokemon(props) {
             types={pokemon.types}
             abilities={pokemon.abilities}
           />
+          </div>
           <NextBtn  id={pokemon.pokedexNumber+1}/>  
         </section>
         

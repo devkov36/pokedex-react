@@ -1,6 +1,6 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import { ListItemButton, ListItemText } from '@mui/material';
+import { ListItemButton, ListItemText, Divider } from '@mui/material';
 import ListItem from './ListItem';
 import { Link } from 'react-router-dom';
 
@@ -70,6 +70,7 @@ export default function LateralMenu() {
         <ListItemButton>
           <ListItemText primary="Home" />
         </ListItemButton>
+        <Divider />
       </Link>
           {menu.map((menuItem, index) => (
             <ListItem key={index} title={menuItem.title}
