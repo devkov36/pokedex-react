@@ -1,4 +1,6 @@
-
+.btn-container {
+  width:70px;
+}
 .arrow {
     border: solid hsl(158, 95%, 34%);
     border-width: 0 10px 10px 0;

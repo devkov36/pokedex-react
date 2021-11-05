@@ -49,8 +49,20 @@
     align-items: center;
     border-radius: 10%;
 }
-.pokemonImg {
+.typeBackground .pokemonImg {
     width: 150px;
+}
+
+.single {
+    aspect-ratio: 1 / 1;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.single .pokemonImg {
+    width: 80%;
 }
 
 .flying-back {
@@ -123,4 +135,31 @@
 
 .dragon-back {
     background-color: var(--dragon);
+}
+
+@media (max-width: 1000px) {
+    .single {
+        aspect-ratio: 1 / 1;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    .single .pokemonImg {
+        width: 80%;
+    }
+}
+@media (max-width: 500px) {
+    .single {
+        aspect-ratio: 1 / 1;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    .single .pokemonImg {
+        width: 80%;
+    }
 }

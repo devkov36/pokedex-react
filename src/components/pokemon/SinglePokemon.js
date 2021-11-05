@@ -25,7 +25,7 @@ function SinglePokemon(props) {
         <section className="pokemon-arrows">
           <PrevBtn  id={pokemon.pokedexNumber-1}/>
           <div className="pokemon-details">  
-          <PokemonImage types={pokemon.types} src={pokemon.imageUrl} />
+          <PokemonImage className="single" types={pokemon.types} src={pokemon.imageUrl} />
           <PokemonDetail
             name={pokemon.name}
             number={pokemon.pokedexNumber}
