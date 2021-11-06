@@ -1,5 +1,5 @@
 const URL = "https://pokemon-bedu.herokuapp.com/v1/pokemons";
-const URLtype = "https://bedu-pokapi.herokuapp.com/v1/types/";
+const URLtype = "https://pokemon-bedu.herokuapp.com/v1/types/";
 
 export const getAllPokemons = async () => {
   const response = await fetch(URL);
