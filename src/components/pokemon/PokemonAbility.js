@@ -1,6 +1,10 @@
 import  PropTypes from 'prop-types';
 function PokemonAbility(props) {
-  return <p className="ability">{props.ability}</p>;
+  return (
+    <div className="abilities">
+      <p className="ability">{props.ability}</p>
+    </div>
+    );
 }
 
 PokemonAbility.propTypes = {

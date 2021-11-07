@@ -1,6 +1,21 @@
 .pokemon-details {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.pokemon-arrows {
+  display: flex;
+  align-items: center;
   justify-content: center;
   height: 78vh;
+  min-height: 600px;
+}
+
+@media (max-width: 500px) {
+  .pokemon-details {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 }

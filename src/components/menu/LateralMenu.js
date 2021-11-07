@@ -1,6 +1,6 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import { ListItemButton, ListItemText } from '@mui/material';
+import { ListItemButton, ListItemText, Divider } from '@mui/material';
 import ListItem from './ListItem';
 import { Link } from 'react-router-dom';
 import "../../css/menu/lateralMenu.css";
@@ -60,20 +60,21 @@ const menu = [
 const style = {
   width: '100%',
   bgcolor: '#D9D9D9',
-  color: 'black',  
+  color: 'black',
 };
 
 export default function LateralMenu() {
   return (
       <List disablePadding={true} sx={style}
-       component="nav">
+        component="nav">
       <Link to="/">
         <ListItemButton>
-          <ListItemText class="side-menu" primary="Home" />
+          <ListItemText primary="Home" />
         </ListItemButton>
+        <Divider />
       </Link>
           {menu.map((menuItem, index) => (
-            <ListItem key={index}  title={menuItem.title}
+            <ListItem key={index} title={menuItem.title}
               submenu={menuItem.children}/>
           ))}
       </List>

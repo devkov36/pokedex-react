@@ -1,18 +1,23 @@
 import React from 'react';
 import '../../css/arrows/prevBtn.css';
+import { Link } from "react-router-dom";
+class PrevBtn extends React.Component {
+//  state = { disabledPrev: false };
 
-function PrevBtn(props) {
- const { index, disabledNext, disabledPrev } = this.state
- const profile = this.props.profiles ? this.props.profiles[index] : null
-  return (
-    <div className="arrow">
-        <p><i className="arrow left">     
-         <PrevBtn toggle={(e) => this.toggleNext(e)} active={disabledNext} />
+  render() {
+    
+    return (
+      
+      <div className="btn-container">
+        <Link to={`/pokemon/${this.props.id}`} activeclassname="active">
+        <p><i className="arrow left">          
         </i>
         </p>
-  </div>
-  )
-};
+        </Link>
+        
+      </div>
+    )
+  };
 
-
+}
 export default PrevBtn

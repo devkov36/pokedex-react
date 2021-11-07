@@ -8,8 +8,8 @@ function PokemonDetail(props) {
   return (
     <div className="detail-text">
       <div className="detail-name-number">
-        <h1 className="detail-name">{props.name}</h1>
         <h1 className="detail-number"># {props.number}</h1>
+        <h1 className="detail-name">{props.name}</h1>
       </div>
       <div className="detail-gen">
         <h3 className="gen-title">Generation: </h3>

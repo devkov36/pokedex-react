@@ -7,7 +7,7 @@ function SearchBtn(props) {
   return (
     <Link to={`/search/${props.search}`}>
       <button type="submit" className="button">
-        <SearchIcon style={{ fontSize: "150%" }} />
+        <SearchIcon style={{ fontSize: "4.5vh"}} />
       </button>
     </Link>
   );

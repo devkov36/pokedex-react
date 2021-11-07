@@ -1,8 +1,10 @@
 .input {
     border: none;
     outline: none;
-    margin-left: 20px;
-    margin-top: 13px;
+    margin-left: 2vh;
+    margin-top: 1.7vh;
+    font-size: 2.5vh;
+    width: 70%;
 }
 
 .input:active {
@@ -12,10 +14,16 @@
 
 .search {
     margin-top: 83px;
-    border: 1px solid black;
-    border-radius: 25px;
-    height: 45px;
+    border: 0.3vh solid #737373;
+    border-radius: 10px;
+    height: 6.5vh;
     float: right;
     width: 42%;
     margin-right: 7%;
+}
+
+@media only screen and (max-width: 425px) {
+    .input{
+        width: 50%;
+    }
 }
