@@ -19,11 +19,16 @@
     height: 6.5vh;
     float: right;
     width: 42%;
-    margin-right: 7%;
+    margin-right: 0.1%;
+    padding-left: 25px;
 }
 
 @media only screen and (max-width: 425px) {
     .input{
-        width: 50%;
+        width: 70%;
+    }
+
+    .search{
+        padding-left: 1px;
     }
 }

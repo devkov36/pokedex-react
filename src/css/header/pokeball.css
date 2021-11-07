@@ -1,3 +1,4 @@
+/*
 #blue {
     background: rgb(17, 199, 255);
     width: 4em;
@@ -6,30 +7,30 @@
     border-style: outset;
     border-radius: 3em;
 }
+*/
 
 #pokeButton{
     width: 90px;
     height: 90px;
-    position:relative;
+    position:static;
     z-index: 1;
-    /*margin-top: -10px;*/
     margin-top: 20px;
+    
+    /*margin-top: 0px;*/
 }
 
 #ext-container{
     display: flex;
     justify-content: space-between;
+    border:10px;
+    border-color: black;
+    box-sizing: border-box;
 }
 
 #in-container{
-    display: flex;
-    
+    display: flex;    
+    box-sizing: border-box;
 }
-.white-with-blue-shadow {
-    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-    color: white;
-    font: 1.5em Georgia, "Archivo Black","Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
- }
 
 #pageTitle{
     text-shadow: 5px 1px 1px black, 0 0 1em red, 0 0 0.2em red;
@@ -37,9 +38,51 @@
     font-family: 'Archivo Black', sans-serif;
     font-size: 50px;
     letter-spacing:.3em;
-    margin-top: 30px;
+    margin-top: 30px; /* -10 */
     padding-left: 10%;
     position:relative;
     z-index: 1;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 1380px) {
+    #in-container{
+        display: flex;   
+        margin-top: -20px; 
+    }   
+}
+
+@media (max-width: 768px) {
+    #pageTitle{
+        padding-left: 5%;
+        letter-spacing: .05em;
+        font-size: 35px
+    }
+}
+
+@media (max-width: 425px) {
+    #pageTitle{
+        padding-left: 2%;
+        letter-spacing: .05em;
+        font-size: 35px
+    }
+
+    #pokeButton{
+        width: 50px;
+        height: 50px;
+        position:static;
+        z-index: 1;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    #pageTitle{
+        padding-left: 2%;
+        letter-spacing: .05em;
+        font-size: 25px
+    }
 }
 
