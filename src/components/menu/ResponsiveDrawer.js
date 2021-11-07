@@ -44,7 +44,7 @@ function ResponsiveDrawer(props) {
           display: { xs: "none", sm: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: { sm: 230, md: 230, lg: 230, xl: 350 },
+            width: { sm: 230, md: 230, lg: 230, xl: 300 },
             backgroundColor: "#D9D9D9",
             position: "relative",
           },
