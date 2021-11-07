@@ -12,5 +12,34 @@
     height: 90px;
     position:relative;
     z-index: 1;
-    margin-top: -10px;
+    /*margin-top: -10px;*/
+    margin-top: 20px;
 }
+
+#ext-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#in-container{
+    display: flex;
+    
+}
+.white-with-blue-shadow {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+    color: white;
+    font: 1.5em Georgia, "Archivo Black","Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+ }
+
+#pageTitle{
+    text-shadow: 5px 1px 1px black, 0 0 1em red, 0 0 0.2em red;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+    letter-spacing:.3em;
+    margin-top: 30px;
+    padding-left: 10%;
+    position:relative;
+    z-index: 1;
+}
+
