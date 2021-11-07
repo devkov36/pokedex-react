@@ -24,10 +24,10 @@ function App() {
         <Container disableGutters maxWidth={false}>
           <PokeHeader />
           <Grid container spacing={0}>
-            <Grid item sm={3} md={2}>
+            <Grid item sm={4} md={3} lg={2} xl={2}>
               <div
                 style={{
-                  minHeight: "78vh",
+                  minHeight: "80vh",
                   height: "100%",
                 }}
               >
@@ -36,7 +36,7 @@ function App() {
                 </Box>
               </div>
             </Grid>
-            <Grid pl="16px" item xs={12} sm={8} md={10}>
+            <Grid pl="16px" item xs={12} sm={8} md={9} lg={10} xl={10}>
               <Box>
                 <Switch>
                   <Route
