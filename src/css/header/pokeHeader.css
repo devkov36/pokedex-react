@@ -35,24 +35,20 @@
 
 
 .pokeHeader{
-    /*background-color: #D62929;*/
     background-color: #D62929;
     padding: 30px 30px 10px 50px;
     height: 5vh;
 }
 
 .search {
-    margin-top: 8.5vh;
-    /*padding-left: 200px;*/
-    
+    margin-top: 8.5vh;    
 }
 
 @media (max-width:768){
     .search {
         padding-left: 50px;
         padding-right: 5px;
-        margin-left: 5px;
-        
+        margin-left: 5px;        
     }
 }
 
@@ -61,6 +57,29 @@
         background-color: #D62929;
         padding: 30px 30px 10px 10px;
         height: 5vh;
+    }
+
+    #bar:before{
+        content: '';
+        clip-path: polygon( 0% 0%, 0% 20%, 100% 20%, 100% 0%);
+        height: 3vh;
+        width: 100%;
+        background: #D62929;    
+        border: 0;        
+        display: block;
+        position: absolute;
+        border-bottom: blue;
+        box-sizing: border-box;
+    }
+    
+    #bar{
+        clip-path: polygon(0% 0%, 0% 20%, 100% 20%, 100% 0%);
+        height: 4vh;
+        width: 100%;
+        background: #691111;    
+        position: relative;
+        border: 0;
+        box-sizing: border-box;
     }
 }
 
