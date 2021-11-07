@@ -67,9 +67,9 @@ export default function LateralMenu() {
   return (
       <List disablePadding={true} sx={style}
         component="nav">
-      <Link to="/">
+      <Link to="/" style={{textDecoration:'none'}}>
         <ListItemButton>
-          <ListItemText primary="Home" />
+          <ListItemText primary="Home" disableTypography={true} />
         </ListItemButton>
         <Divider />
       </Link>
