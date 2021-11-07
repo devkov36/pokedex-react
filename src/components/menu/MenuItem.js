@@ -9,7 +9,7 @@ const style = {
 function MenuItemElem({ subTitle }) {
   return (
     <ListItemButton sx={{ pl: 4 }}>
-      <ListItemText style={ style} primary={subTitle} />
+      <ListItemText style={ style} primary={subTitle} disableTypography={true}/>
     </ListItemButton>
   );
 }

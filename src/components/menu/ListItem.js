@@ -26,7 +26,7 @@ export default function ListItem({ title, submenu }) {
   return (
     <>
       <ListItemButton  onClick={handleClick}>
-        <ListItemText style={style}  primary={title} />
+        <ListItemText style={style}  primary={title} disableTypography={true} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open}   timeout="auto" unmountOnExit>
