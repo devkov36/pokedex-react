@@ -24,8 +24,8 @@ function menuRoute(route, subItem) {
     case 'class':
       return `/class/${subItem}`;
 
-    case 'class':
-      return `/gen/${subItem}`;
+    case 'gen':
+      return `/gen/${subItem[0]}`;
   
     default:
       return '';
