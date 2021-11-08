@@ -33,8 +33,9 @@ export default function ListItem({ title, submenu, route }) {
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           {submenu.map((subItem, index) => (
-            <Link to={`/${route}/${route === 'type' ? subItem.toLowerCase() : subItem}`}>
-              <MenuItem key={route + index} subTitle={subItem} />
+            <Link key={route + index}
+              to={`/${route}/${route === 'type' ? subItem.toLowerCase() : subItem}`}>
+              <MenuItem subTitle={subItem} />
             </Link>
           ))}
         </List>
