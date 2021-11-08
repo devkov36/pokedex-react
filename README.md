@@ -1,4 +1,4 @@
-# Pokedex-BEDU
+# Pokedex-BEDU (Equipo 11)
 ### Proyecto web para la creación de una Pokedex con la biblioteca [React](https://es.reactjs.org/) basada en la API desarrollada en el modulo anterior [Pokemon-API](https://github.com/AbregoDev/pokemon-API), en la que puedes consultar información de tu pokemón favorito, ver los pokemón existentes, filtrarlos por tipos o generaciones y hacer búsquedas.
 
 
