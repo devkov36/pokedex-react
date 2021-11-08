@@ -19,7 +19,7 @@ function SinglePokemon(props) {
     <>
       {pokemon.length === 0 ? (
         <section className="pokemon-details">
-          <h1>Loading...</h1>
+          <img src="https://cdn.dribbble.com/users/946764/screenshots/2844436/media/9d3d886c377e8db1eaaec5cf743700c6.gif" alt="loading" />
         </section>
       ) : (
         <section className="pokemon-arrows">
