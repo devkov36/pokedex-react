@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import LateralMenu from "./LateralMenu";
 
-const drawerWidth = 180;
+const drawerWidth = 220;
 
 function ResponsiveDrawer(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -44,7 +44,7 @@ function ResponsiveDrawer(props) {
           display: { xs: "none", sm: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: drawerWidth,
+            width: { sm: 215, md: 225, lg: 215, xl: 270 },
             backgroundColor: "#D9D9D9",
             position: "relative",
           },

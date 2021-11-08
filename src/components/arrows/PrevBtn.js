@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/arrows/prevBtn.css';
+import '../../css/arrows/arrowBtn.css';
 import { Link } from "react-router-dom";
 class PrevBtn extends React.Component {
 //  state = { disabledPrev: false };

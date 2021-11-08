@@ -13,16 +13,27 @@
 }
 
 .search {
+    margin-top: 83px;
     border: 0.3vh solid #737373;
     border-radius: 10px;
     height: 6.5vh;
     float: right;
     width: 42%;
-    margin-right: 7%;
+    margin-right: 0.1%;
+    padding-left: 25px;
 }
 
 @media only screen and (max-width: 425px) {
     .input{
-        width: 50%;
+        margin-left: 2px;
+        width: 70%;
+    }
+
+    .search{
+        margin-top: 3px;
+        width: 100%;
+        padding-left: 1px;
+        margin-bottom: 5px;
+        z-index: 1;
     }
 }

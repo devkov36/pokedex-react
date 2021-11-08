@@ -37,6 +37,13 @@ function PokemonList(props) {
               </Grid>
             ))}
           </Grid>
+        ) : props.title === "Home" ? (
+          <div className="pokemon-list-loading">
+            <img
+              src="https://cdn.dribbble.com/users/946764/screenshots/2844436/media/9d3d886c377e8db1eaaec5cf743700c6.gif"
+              alt="loading"
+            />
+          </div>
         ) : (
           <div className="pokemon-list-empty">
             <h2>We're sorry! We couldn't find results for "{props.title}".</h2>

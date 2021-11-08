@@ -1,16 +1,92 @@
-#blue {
-    background: rgb(17, 199, 255);
-    width: 4em;
-    height: 4em;
-    border-width: 1vh;
-    border-style: outset;
-    border-radius: 3em;
-}
-
 #pokeButton{
     width: 90px;
     height: 90px;
+    position:static;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+#ext-container{
+    display: flex;
+    justify-content: space-between;
+    border:10px;
+    border-color: black;
+    box-sizing: border-box;
+}
+
+#in-container{
+    display: flex;    
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#pageTitle{
+    text-shadow: 5px 1px 1px black, 0 0 1em red, 0 0 0.2em red;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+    letter-spacing:.3em;
+    margin-top: 30px; 
+    padding-left: 10%;
     position:relative;
     z-index: 1;
-    margin-top: -10px;
+    box-sizing: border-box;
 }
+
+
+
+@media (max-width: 1380px) {
+    #in-container{
+        display: flex;   
+        margin-top: -20px; 
+    }   
+}
+
+@media (max-width: 1024px) {
+    #in-container{ 
+        margin-top: -35px; 
+    }  
+}
+
+@media (max-width: 768px) {
+    #pageTitle{
+        padding-left: 5%;
+        letter-spacing: .05em;
+        font-size: 35px
+    }
+}
+
+@media (max-width: 425px) {
+    #pageTitle{
+        text-shadow: 3px 0px 0px black, 0 0 1em red, 0 0 0.2em red;
+        padding-left: 2%;
+        letter-spacing: .05em;
+        font-size: 35px
+    }
+
+    #pokeButton{
+        width: 50px;
+        height: 50px;
+        position:static;
+        z-index: 1;
+        margin-top: 20px;
+    }
+
+    #ext-container{
+        display: flex;  
+        flex-wrap: wrap;      
+        justify-content: space-between;
+        border:10px;
+        border-color: black;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 320px) {
+    #pageTitle{
+        padding-left: 2%;
+        letter-spacing: .05em;
+        font-size: 25px
+    }
+}
+

@@ -38,6 +38,9 @@
   text-decoration: none;
   color: #737373;
 }
+.clas-name > *:hover {
+  text-decoration: underline;
+}
 .type-title {
   margin: 8px 8px;
   font-size: 3vh;

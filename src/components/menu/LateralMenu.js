@@ -3,6 +3,7 @@ import List from '@mui/material/List';
 import { ListItemButton, ListItemText, Divider } from '@mui/material';
 import ListItem from './ListItem';
 import { Link } from 'react-router-dom';
+import "../../css/menu/lateralMenu.css";
 
 const menu = [
   {
@@ -66,9 +67,9 @@ export default function LateralMenu() {
   return (
       <List disablePadding={true} sx={style}
         component="nav">
-      <Link to="/">
+      <Link to="/" style={{textDecoration:'none'}}>
         <ListItemButton>
-          <ListItemText primary="Home" />
+          <ListItemText primary="Home" disableTypography={true} />
         </ListItemButton>
         <Divider />
       </Link>
