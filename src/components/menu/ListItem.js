@@ -7,9 +7,7 @@ import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import MenuItem from './MenuItem';
-import { getAllClassifications } from '../../services/getPokemonInfo';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import "../../css/menu/listItem.css";
 
 const style = {
@@ -19,34 +17,24 @@ const style = {
 };
 
 
-export default function ListItem({ title, submenu }) {
+export default function ListItem({ title, submenu, route }) {
   const [open, setOpen] = React.useState(false);
-  const [classifications, setclassifications] = React.useState([]);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
-  // Get classifications
-  useEffect(() => {
-    getAllClassifications().then((classData) => {
-      setclassifications(classData);
-    });
-  }, []);
-
-  console.log(classifications);
-
   return (
     <>
-      <ListItemButton  onClick={handleClick}>
-        <ListItemText style={style}  primary={title} disableTypography={true} />
+      <ListItemButton onClick={handleClick}>
+        <ListItemText style={style} primary={title} disableTypography={true} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={open}   timeout="auto" unmountOnExit>
-        <List component="div"  disablePadding>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
           {submenu.map((subItem, index) => (
-            <Link to={`/class/${subItem}`}>
-                <MenuItem key={index} subTitle={subItem} />
+            <Link to={`/${route}/${route === 'type' ? subItem.toLowerCase() : subItem}`}>
+              <MenuItem key={route + index} subTitle={subItem} />
             </Link>
           ))}
         </List>
