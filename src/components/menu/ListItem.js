@@ -16,6 +16,21 @@ const style = {
   color: 'black',
 };
 
+function menuRoute(route, subItem) {
+  switch (route) {
+    case 'type':
+      return `/type/${subItem.toLowerCase()}`;
+
+    case 'class':
+      return `/class/${subItem}`;
+
+    case 'class':
+      return `/gen/${subItem}`;
+  
+    default:
+      return '';
+  }
+}
 
 export default function ListItem({ title, submenu, route }) {
   const [open, setOpen] = React.useState(false);
@@ -34,7 +49,7 @@ export default function ListItem({ title, submenu, route }) {
         <List component="div" disablePadding>
           {submenu.map((subItem, index) => (
             <Link key={route + index}
-              to={`/${route}/${route === 'type' ? subItem.toLowerCase() : subItem}`}>
+              to={menuRoute(route, subItem)}>
               <MenuItem subTitle={subItem} />
             </Link>
           ))}
