@@ -55,6 +55,10 @@ function Title(props) {
   if (props.page === "classification") {
     return <h1 className="title-line">{"Classification: " + title}</h1>;
   }
+  // If the page is generation, the title will be generation and the title
+  if (props.page === "generation") {
+    return <h1 className="title-line">{"Generation: " + title}</h1>;
+  }
   //If the page is type, the title will be the pokemon's type in the variable type of the state
   if (props.page === "type") {
     return (
