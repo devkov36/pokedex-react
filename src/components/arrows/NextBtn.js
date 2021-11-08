@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/arrows/nextBtn.css';
+import '../../css/arrows/arrowBtn.css';
 import { Link } from "react-router-dom";
 class NextBtn extends React.Component {
   render() {
