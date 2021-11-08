@@ -10,7 +10,7 @@ function PokeBall(){
         <section id="ext-container">
             <section >
                 <Link to='/' id="in-container">
-                <img src={pokeball} alt="Pokeball" id="pokeButton" onClick={GoHome} />
+                <img src={pokeball} alt="Pokeball" id="pokeButton" />
                 <p id="pageTitle">Pokedex</p>
                 </Link>
             </section>
