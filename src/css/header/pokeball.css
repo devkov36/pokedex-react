@@ -17,6 +17,7 @@
 #in-container{
     display: flex;    
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 #pageTitle{
