@@ -102,6 +102,19 @@ function App() {
                       />
                     )}
                   />
+                  <Route
+                    path="/gen/:gen"
+                    render={({ match }) => (
+                      <PokemonList
+                        page="generation"
+                        title={match.params.gen}
+                        pokemons={pokemon.filter(
+                          (pokemon) =>
+                            pokemon.gen.toString() === match.params.gen
+                        )}
+                      />
+                    )}
+                  />
                 </Switch>
               </Box>
             </Grid>
