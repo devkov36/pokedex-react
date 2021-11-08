@@ -8,7 +8,16 @@ import "../../css/menu/lateralMenu.css";
 const menu = [
   {
     title: "Generations",
-    children: ["1", "2", "3", "4", "5", "6", "7", "8"],
+    children: [
+        '1 - Kanto',
+        '2 - Johto',
+        '3 - Hoenn',
+        '4 - Sinnoh',
+        '5 - Unova',
+        '6 - Kalos',
+        '7 - Alola',
+        '8 - Galar',
+      ],
   },
   {
     title: "Types",
