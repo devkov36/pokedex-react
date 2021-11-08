@@ -48,7 +48,7 @@ function PokemonList(props) {
           <div className="pokemon-list-empty">
             <h2>We're sorry! We couldn't find results for "{props.title}".</h2>
             <h3>
-              Please try with a pokedex number between 1 and 151 or a letter.
+              Please try with a pokedex number between 1 and 801 or a letter.
             </h3>
           </div>
         )}

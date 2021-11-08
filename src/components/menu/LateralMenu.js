@@ -16,7 +16,6 @@ const menu = [
         '5 - Unova',
         '6 - Kalos',
         '7 - Alola',
-        '8 - Galar',
       ],
   },
   {
