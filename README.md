@@ -1,7 +1,10 @@
 # Pokedex-BEDU
-### Proyecto web para la creación de una Pokedex sobre la biblioteca [React](https://es.reactjs.org/) basada en la API desarrollada en el modulo anterior [Pokemon-API](https://github.com/AbregoDev/pokemon-API)
+### Proyecto web para la creación de una Pokedex con la biblioteca [React](https://es.reactjs.org/) basada en la API desarrollada en el modulo anterior [Pokemon-API](https://github.com/AbregoDev/pokemon-API), en la que puedes consultar información de tu pokemón favorito, ver los pokemón existentes, filtrarlos por tipos o generaciones y hacer búsquedas.
 
-En esta primera etapa se diseñó la estructura sobre la cual se desarrollará el proyecto y se instalaron las configuraciones necesarias, como: [React](https://es.reactjs.org/) y la biblioteca UI que estaremos utilizando, en este caso [MaterialUI](https://mui.com/)
+
+En esta etapa de entrega se crearon componentes basados en nuestro diseño inicial para lograr una interfaz más limpia y moderna, así mismo utilizamos algunos componentes de la biblioteca de [MaterialUI](https://mui.com/) que nos permitieron obtener una mejor estructura en nuestra UI.
+y finalmente utilizamos [React-router](https://reactrouter.com/) para crear nuestro enrutamiento dentro de nuestra aplicación. 
+
 
 ### [Mockups de la página web y estructura del proyecto](https://www.canva.com/design/DAEs2SHxiHU/mluAQ8A2jjx731OP-WmTgg/watch?utm_content=DAEs2SHxiHU&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
 
@@ -24,6 +27,8 @@ Una vez instaladas puedes ejecutar el script disponible para arrancar el proyect
 
     npm start
 
+### Enlaces de entrega
+#### Presentación en [Vídeo](https://drive.google.com/file/d/1qafnCiOGt3W39KmR7vvoZVfPnFjtIfVS/view) 
 
 ### Colaboradores:
 > - [Ernesto Velasco Valdez](https://github.com/Ernestve)
