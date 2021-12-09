@@ -1,6 +1,12 @@
 .search {
-  margin-top: 70px;
-  width: 44%;
+  margin-top: 95px;
+  width: 50%;
+}
+@media screen and (max-width: 1440px) {
+  .search {
+    margin-top: 80px;
+    width: 45%;
+  }
 }
 
 @media only screen and (max-width: 425px) {

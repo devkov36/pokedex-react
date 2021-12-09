@@ -56,7 +56,7 @@ function SinglePokemon(props) {
           <section>
             <Link to="/" style={{ textDecoration: "none" }}>
               <Button
-                size="medium"
+                size="large"
                 color="success"
                 variant="contained"
                 sx={{
