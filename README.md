@@ -28,6 +28,7 @@ Una vez instaladas puedes ejecutar el script disponible para arrancar el proyect
     npm start
 
 ### Enlaces de entrega
+#### Presentación PrototypeDay (https://docs.google.com/presentation/d/1fAJVuldbPB-UNfRdPp9BHKSTXOFisrMO_WRrXSKfSVA/edit#slide=id.g104b07e67ce_1_1)
 #### Presentación en [Vídeo](https://drive.google.com/file/d/1qafnCiOGt3W39KmR7vvoZVfPnFjtIfVS/view) 
 
 ### Colaboradores:
