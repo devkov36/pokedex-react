@@ -55,7 +55,7 @@
 
 .single {
     aspect-ratio: 1 / 1;
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,10 +137,16 @@
     background-color: var(--dragon);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+    .single{
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
     .single {
         aspect-ratio: 1 / 1;
-        width: 40%;
+        width: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -150,10 +156,10 @@
         width: 80%;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 425px) {
     .single {
         aspect-ratio: 1 / 1;
-        width: 80%;
+        width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;

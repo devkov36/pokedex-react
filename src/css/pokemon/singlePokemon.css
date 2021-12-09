@@ -1,3 +1,8 @@
+.single-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .pokemon-details {
   display: flex;
   align-items: center;
@@ -8,14 +13,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 78vh;
-  min-height: 600px;
+  height: 68vh;
+  margin-right: 24px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 425px) {
   .pokemon-details {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 232px;
   }
 }

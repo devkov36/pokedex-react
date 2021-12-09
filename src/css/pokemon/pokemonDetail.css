@@ -62,117 +62,93 @@
 }
 .ability {
   margin: 0px 8px;
-  font-size: 2vh;
+  font-size: 2.5vh;
+  color: #737373;
 }
 
-@media (max-height: 800px) {
+@media (max-width: 1024px) {
   .detail-name-number {
-    font-size: 2.5vw;
+    font-size: x-large;
   }
   .detail-gen {
-    font-size: 2vw;
+    font-size: larger;
   }
   .detail-clas {
-    font-size: 1.5vw;
+    font-size: larger;
   }
   .type-title {
-    font-size: 1.5vw;
+    font-size: larger;
   }
   .abil-title {
     margin: 8px 8px;
-    font-size: 1.5vw;
+    font-size: larger;
   }
   .ability {
-    font-size: 1.5vw;
+    font-size: medium;
   }
 }
 
-@media (max-width: 1170px) {
-  .detail-name-number {
-    font-size: 3vh;
-  }
-  .detail-gen {
-    font-size: 2.5vh;
-  }
-  .detail-clas {
-    font-size: 2.5vh;
-  }
-  .type-title {
-    font-size: 2.5vh;
-  }
-  .abil-title {
-    margin: 8px 8px;
-    font-size: 2.5vh;
-  }
-  .ability {
-    font-size: 2vh;
-  }
-}
-
-@media (max-width: 900px) {
-  .detail-name-number {
-    font-size: 2.5vh;
-  }
-  .detail-gen {
-    font-size: 2vh;
-  }
-  .detail-clas {
-    font-size: 1.5vh;
-  }
-  .type-title {
-    font-size: 1.5vh;
-  }
-  .abil-title {
-    margin: 8px 8px;
-    font-size: 1.5vh;
-  }
-  .ability {
-    font-size: 1.5vh;
-  }
-}
-
-@media (max-height: 800px) {
-  .detail-name-number {
-    font-size: 2.5vw;
-  }
-  .detail-gen {
-    font-size: 2vw;
-  }
-  .detail-clas {
-    font-size: 1.5vw;
-  }
-  .type-title {
-    font-size: 1.5vw;
-  }
-  .abil-title {
-    margin: 8px 8px;
-    font-size: 1.5vw;
-  }
-  .ability {
-    font-size: 1.5vw;
-  }
-}
-@media (max-width: 505px) {
+@media (max-width: 768px) {
   .detail-text {
-    width: 80%;
+    width: 50%;
   }
   .detail-name-number {
-    font-size: 2.5vw;
+    font-size: medium;
   }
   .detail-gen {
-    font-size: 2vh;
+    font-size: medium;
   }
   .detail-clas {
-    font-size: 1.5vh;
+    font-size: small;
   }
   .type-title {
-    font-size: 1.5vh;
+    font-size: medium;
   }
   .abil-title {
     margin: 8px 8px;
-    font-size: 1.5vh;
+    font-size: small;
   }
   .ability {
-    font-size: 1.5vh;
+    font-size: smaller;
+  }
+}
+@media (max-width: 425px) {
+  .detail-name-number {
+    font-size: larger;
+  }
+  .detail-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-number {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+  }
+  .detail-gen {
+    font-size: small;
+  }
+  .detail-clas {
+    font-size: small;
+  }
+  .type-title {
+    font-size: medium;
+  }
+  .type-tags {
+    display: inline;
+  }
+  .abil-title {
+    margin: 8px 8px;
+    font-size: medium;
+  }
+  .abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ability {
+    font-size: small;
   }
 }

@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Container disableGutters maxWidth={false}>
-          <PokeHeader />
+          <PokeHeader pokemons={pokemon} />
           <Grid container spacing={0}>
             <Grid item sm={4} md={3} lg={2} xl={2}>
               <div
@@ -113,6 +113,19 @@ function App() {
                             pokemon.gen.toString() === match.params.gen
                         )}
                       />
+                    )}
+                  />
+                  <Route
+                    path="/documentation"
+                    render={() => (
+                      <div>
+                        <h1>Documentation</h1>
+                        <img
+                          style={{ width: "100%" }}
+                          src="https://cdn.dribbble.com/users/1812146/screenshots/6968859/media/da21883ccb21ef749294ebc85a19dcf4.png"
+                          alt="under-construction"
+                        />
+                      </div>
                     )}
                   />
                 </Switch>

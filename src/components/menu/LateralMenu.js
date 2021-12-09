@@ -9,14 +9,14 @@ const menu = [
   {
     title: "Generations",
     children: [
-        '1 - Kanto',
-        '2 - Johto',
-        '3 - Hoenn',
-        '4 - Sinnoh',
-        '5 - Unova',
-        '6 - Kalos',
-        '7 - Alola',
-      ],
+      "1 - Kanto",
+      "2 - Johto",
+      "3 - Hoenn",
+      "4 - Sinnoh",
+      "5 - Unova",
+      "6 - Kalos",
+      "7 - Alola",
+    ],
   },
   {
     title: "Types",
@@ -176,6 +176,12 @@ export default function LateralMenu() {
         submenu={menu[2].children}
         route="class"
       />
+      <Link to="/documentation" style={{ textDecoration: "none" }}>
+        <ListItemButton>
+          <ListItemText primary="API-Docs" disableTypography={true} />
+        </ListItemButton>
+        <Divider />
+      </Link>
     </List>
   );
 }

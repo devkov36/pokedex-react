@@ -3,12 +3,31 @@ import PokemonCard from "./PokemonCard";
 import Title from "./Title";
 import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function PokemonList(props) {
+  const [pokemonStart, setPokemonStart] = useState(8);
   const pokemons = props.pokemons;
   const orderedPokemons = pokemons.sort((a, b) => {
     return a.pokedexNumber - b.pokedexNumber;
   });
+
+  const windowTop = () => {
+    setPokemonStart(12);
+  };
+
+  const scrollToEnd = () => {
+    setPokemonStart(pokemonStart + 8);
+  };
+
+  window.onscroll = function () {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      scrollToEnd();
+    } else if (window.scrollY === 0) {
+      windowTop();
+    }
+  };
+
   const isPokemonListEmpty = pokemons.length === 0;
   return (
     <div className="pokemon-list">
@@ -26,7 +45,7 @@ function PokemonList(props) {
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
-            {orderedPokemons.map((pokemon, index) => (
+            {orderedPokemons.slice(0, pokemonStart).map((pokemon, index) => (
               <Grid key={index} item xs={12} sm={6} md={3}>
                 <PokemonCard
                   imageUrl={pokemon.imageUrl}
