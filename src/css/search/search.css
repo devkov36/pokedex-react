@@ -2,6 +2,9 @@
   margin-top: 95px;
   width: 50%;
 }
+.search .MuiOutlinedInput-root {
+  border-radius: 50px;
+}
 @media screen and (max-width: 1440px) {
   .search {
     margin-top: 80px;

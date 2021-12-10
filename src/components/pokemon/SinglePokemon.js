@@ -27,15 +27,15 @@ function SinglePokemon(props) {
           />
         </section>
       ) : (
-        <div className="single-pokemon">
-          <section className="pokemon-arrows">
-            <PrevBtn
-              id={
-                pokemon.pokedexNumber === 1
-                  ? pokemon.pokedexNumber
-                  : pokemon.pokedexNumber - 1
-              }
-            />
+        <section className="pokemon-arrows">
+          <PrevBtn
+            id={
+              pokemon.pokedexNumber === 1
+                ? pokemon.pokedexNumber
+                : pokemon.pokedexNumber - 1
+            }
+          />
+          <div className="single-pokemon">
             <div className="pokemon-details">
               <PokemonImage
                 className="single"
@@ -51,23 +51,23 @@ function SinglePokemon(props) {
                 abilities={pokemon.abilities}
               />
             </div>
-            <NextBtn id={pokemon.pokedexNumber + 1} />
-          </section>
-          <section>
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <Button
-                size="large"
-                color="success"
-                variant="contained"
-                sx={{
-                  display: { xs: "none", sm: "block" },
-                }}
-              >
-                Go back
-              </Button>
-            </Link>
-          </section>
-        </div>
+            <section>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Button
+                  size="large"
+                  color="success"
+                  variant="contained"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                  }}
+                >
+                  Go back
+                </Button>
+              </Link>
+            </section>
+          </div>
+          <NextBtn id={pokemon.pokedexNumber + 1} />
+        </section>
       )}
     </>
   );

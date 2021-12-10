@@ -2,11 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Grid, Container, Box } from "@mui/material";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { getAllPokemons } from "../services/getPokemonInfo";
 import PokemonList from "./pokemon/PokemonList";
 import ResponsiveDrawer from "./menu/ResponsiveDrawer";
 import PokeHeader from "./header/PokeHeader";
 import SinglePokemon from "./pokemon/SinglePokemon";
-import { getAllPokemons } from "../services/getPokemonInfo";
+import Docs from "../components/documentation/Docs";
 import "../css/index.css";
 
 function App() {
@@ -115,19 +116,7 @@ function App() {
                       />
                     )}
                   />
-                  <Route
-                    path="/documentation"
-                    render={() => (
-                      <div>
-                        <h1>Documentation</h1>
-                        <img
-                          style={{ width: "100%" }}
-                          src="https://cdn.dribbble.com/users/1812146/screenshots/6968859/media/da21883ccb21ef749294ebc85a19dcf4.png"
-                          alt="under-construction"
-                        />
-                      </div>
-                    )}
-                  />
+                  <Route path="/documentation" render={() => <Docs />} />
                 </Switch>
               </Box>
             </Grid>
