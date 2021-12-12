@@ -1,8 +1,10 @@
+import { Box } from "@mui/material";
+
 function Docs() {
   return (
-    <div class="content">
-      <article class="article__Article-dsqu2p-0 docs__Article-y8vzk-1 kuaylo gJdYTa">
-        <h2 id="introduction">Introduction</h2>
+    <Box>
+      <article>
+        <h2>Introduction</h2>
         <p>
           This documentation will help you get familiar with the resources of
           the <strong>Pokemon-API</strong> and show you how to make different
@@ -25,61 +27,45 @@ function Docs() {
           </a>
         </p>
         <p>
-          All requests are <code class="language-text">GET</code> requests and
-          go over <code class="language-text">https</code>. All responses will
-          return data in <code class="language-text">json</code>.
+          All requests are <code>GET</code> requests and go over{" "}
+          <code>https</code>. All responses will return data in{" "}
+          <code>json</code>.
         </p>
-        <div
-          class="restQuery__Wrapper-tkzubw-0 iQKEuF gatsby-highlight"
-          data-language="shell"
-        >
-          <pre class="language-shell">
-            <code class="language-shell">
-              <span class="endpoint">
-                <span class="request">GET </span>
-                https://pokemon-bedu.herokuapp.com/v1
-              </span>
-            </code>
-          </pre>
+        <div>
+          <code>
+            <span>
+              <span>GET </span>
+              https://pokemon-bedu.herokuapp.com/v1
+            </span>
+          </code>
         </div>
-
-        <div class="gatsby-highlight" data-language="json">
-          <pre class="language-json">
-            <code class="language-json">
-              <span class="token punctuation">{"{"} </span>
-              <span class="token property">"welcome to Pokémon API"</span>
-              <span class="token punctuation">{"["} </span>
-              <br />
-              <span class="token property">"pokemons"</span>
-              <span class="token operator">:</span>
-              <span class="token string">
-                "https://pokemon-bedu.herokuapp.com/v1/pokemons"
-              </span>
-              <span class="token punctuation">,</span>
-              <br />
-              <span class="token property">"classification"</span>
-              <span class="token operator">:</span>{" "}
-              <span class="token string">
-                "https://pokemon-bedu.herokuapp.com/v1/classification"
-              </span>
-              <span class="token punctuation">,</span>
-              <br />
-              <span class="token property">"types"</span>
-              <span class="token operator">:</span>{" "}
-              <span class="token string">
-                "https://pokemon-bedu.herokuapp.com/v1/types"
-              </span>
-              <span class="token punctuation">,</span>
-              <br />
-              <span class="token property">"gens"</span>
-              <span class="token operator">:</span>{" "}
-              <span class="token string">
-                "https://pokemon-bedu.herokuapp.com/v1/gens"
-              </span>
-              <span class="token punctuation">{"]"}</span>
-              <span class="token punctuation">{"}"}</span>
-            </code>
-          </pre>
+        <div>
+          <code>
+            <span>{"{"} </span>
+            <span>"welcome to Pokémon API"</span>
+            <span>{"["} </span>
+            <br />
+            <span>"pokemons"</span>
+            <span>:</span>
+            <span>"https://pokemon-bedu.herokuapp.com/v1/pokemons"</span>
+            <span>,</span>
+            <br />
+            <span>"classification"</span>
+            <span>:</span>{" "}
+            <span>"https://pokemon-bedu.herokuapp.com/v1/classification"</span>
+            <span>,</span>
+            <br />
+            <span>"types"</span>
+            <span>:</span>{" "}
+            <span>"https://pokemon-bedu.herokuapp.com/v1/types"</span>
+            <span>,</span>
+            <br />
+            <span>"gens"</span>
+            <span>:</span>{" "}
+            <span>"https://pokemon-bedu.herokuapp.com/v1/gens"</span>
+            <span>{"]"}</span>
+            <span>{"}"}</span>
+          </code>
         </div>
         <p>There are currently four available resources:</p>
         <ul>
@@ -125,7 +111,7 @@ function Docs() {
           </li>
         </ul>
       </article>
-    </div>
+    </Box>
   );
 }
 
