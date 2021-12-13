@@ -53,7 +53,7 @@ PokemonDetail.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   gen: PropTypes.number.isRequired,
-  classification: PropTypes.string.isRequired,
+  classification: PropTypes.string,
   types: PropTypes.array.isRequired,
   abilities: PropTypes.array.isRequired,
 };
