@@ -3,4 +3,12 @@
   color: aliceblue;
   border: 1px solid #3b3e40;
   border-radius: 5px;
+  padding: 8px;
+  font-family: "Fira Code", monospace;
+}
+.text {
+  font-family: "Roboto", sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif;
 }

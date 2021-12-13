@@ -59,7 +59,6 @@ function PokemonList(props) {
         ) : props.page === "home" ||
           props.page === "type" ||
           props.page === "classification" ||
-          props.page === "search" ||
           props.page === "generation" ? (
           <div className="pokemon-list-loading">
             <img
