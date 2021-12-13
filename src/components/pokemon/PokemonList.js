@@ -4,9 +4,12 @@ import Title from "./Title";
 import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import ScrollTop from "./ScrollTop";
 
 function PokemonList(props) {
-  const [pokemonStart, setPokemonStart] = useState(8);
+  const [pokemonStart, setPokemonStart] = useState(12);
   const pokemons = props.pokemons;
   const orderedPokemons = pokemons.sort((a, b) => {
     return a.pokedexNumber - b.pokedexNumber;
@@ -55,6 +58,15 @@ function PokemonList(props) {
                 />
               </Grid>
             ))}
+            <ScrollTop {...props}>
+              <Fab
+                style={{ backgroundColor: "#d62929", color: "white" }}
+                size="medium"
+                aria-label="scroll back to top"
+              >
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </ScrollTop>
           </Grid>
         ) : props.page === "home" ||
           props.page === "type" ||

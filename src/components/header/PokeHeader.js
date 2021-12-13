@@ -6,7 +6,7 @@ import PokeBall from "./Pokeball.js";
 
 function PokeHeader(props) {
   return (
-    <section>
+    <section id="back-to-top-anchor">
       <header id="leds" className="pokeHeader">
         <PokeBall pokemons={props.pokemons} />
       </header>

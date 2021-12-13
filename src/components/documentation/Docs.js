@@ -1,10 +1,13 @@
 import { Box } from "@mui/material";
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import ScrollTop from "../pokemon/ScrollTop";
 import "./docs.css";
 
-function Docs() {
+function Docs(props) {
   return (
     <Box sx={{ margin: 2 }}>
-      <article>
+      <article className="docs">
         <h1 className="text">Introduction</h1>
         <p>
           This documentation will help you get familiar with the resources of
@@ -241,7 +244,17 @@ function Docs() {
             /v1/gens/1
           </code>
         </div>
+        <h2>Happy Coding 🎉</h2>
       </article>
+      <ScrollTop {...props}>
+        <Fab
+          style={{ backgroundColor: "#d62929", color: "white" }}
+          size="medium"
+          aria-label="scroll back to top"
+        >
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </Box>
   );
 }
