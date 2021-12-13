@@ -1,8 +1,9 @@
 import { Box } from "@mui/material";
+import "./docs.css";
 
 function Docs() {
   return (
-    <Box>
+    <Box sx={{ margin: 2 }}>
       <article>
         <h2>Introduction</h2>
         <p>
@@ -39,7 +40,7 @@ function Docs() {
             </span>
           </code>
         </div>
-        <div>
+        <div className="terminal">
           <code>
             <span>{"{"} </span>
             <span>"welcome to Pokémon API"</span>

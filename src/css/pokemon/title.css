@@ -9,6 +9,7 @@
 .title-line {
   display: flex;
   align-items: center;
+  margin-left: 16px;
 }
 .title-img {
   width: 40px;
@@ -16,8 +17,7 @@
 }
 
 @media (max-width: 425px) {
-  
-  .pokemon-list-header{
+  .pokemon-list-header {
     padding-top: 30px;
     margin-top: 35px;
   }
